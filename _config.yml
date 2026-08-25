@@ -1,0 +1,15 @@
+title: Proyecto de Ingeniería IV - Axel Vergara
+description: Página individual del curso Proyecto de Ingeniería IV (Otoño 2026, Ibero Puebla). Documentación semanal del emprendimiento (página web + producto físico con IA + app conectada).
+theme: just-the-docs
+
+# IMPORTANTE: cambia esto por tu URL real una vez que crees el repositorio.
+# Formato: https://TU-USUARIO-DE-GITHUB.github.io/NOMBRE-DEL-REPO
+url: https://vergarapaezaxelmanuel-cyber.github.io
+
+aux_links:
+  Repositorio en GitHub: https://github.com/vergarapaezaxelmanuel-cyber/axel-vergara-engineering-project-4
+# Orden de navegación por defecto (se puede sobreescribir por archivo con nav_order)
+nav_sort: case_sensitive
+
+# Footer
+footer_content: "Proyecto de Ingeniería IV · Otoño 2026 · Ibero Puebla"
