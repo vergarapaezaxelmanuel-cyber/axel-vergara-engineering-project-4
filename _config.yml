@@ -2,7 +2,11 @@
    description: Página individual del curso Proyecto de Ingeniería IV (Otoño 2026, Ibero Puebla). Documentación semanal del emprendimiento (página web + producto físico con IA + app conectada).
    theme: just-the-docs
    color_scheme: axel
-
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
    url: https://vergarapaezaxelmanuel-cyber.github.io/axel-vergara-engineering-project-4
 
    aux_links:
@@ -11,4 +15,3 @@
    nav_sort: case_sensitive
 
    footer_content: "Proyecto de Ingeniería IV · Otoño 2026 · Ibero Puebla"
-   

@@ -1,8 +1,8 @@
-   ---
-   title: Inicio
-   layout: home
-   nav_order: 1
-   ---
+---
+title: Inicio
+layout: default
+nav_order: 1
+---
 
    # ¡Bienvenido/a! 👋
 
@@ -19,4 +19,3 @@
    - [Proyecto Final](./proyecto-final.html) — la entrega integrada al final del curso.
 
    _(Reemplaza este texto por tu propia introducción: quién eres, el nombre de tu proyecto/producto, y una imagen o logo si ya lo tienes.)_
-   
