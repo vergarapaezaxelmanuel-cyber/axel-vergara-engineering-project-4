@@ -1,5 +1,6 @@
 ---
 title: Semana 15 - Semana de construcción / Ensayo de entrega
+layout: default
 parent: Semanas
 nav_order: 15
 ---

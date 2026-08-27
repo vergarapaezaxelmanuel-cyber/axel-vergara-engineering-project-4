@@ -1,5 +1,6 @@
 ---
 title: Semana 11 - Regulación y certificaciones
+layout: default
 parent: Semanas
 nav_order: 11
 ---

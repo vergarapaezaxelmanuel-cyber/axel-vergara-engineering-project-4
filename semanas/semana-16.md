@@ -1,5 +1,6 @@
 ---
 title: Semana 16 - Entrega y evaluación final
+layout: default
 parent: Semanas
 nav_order: 16
 ---

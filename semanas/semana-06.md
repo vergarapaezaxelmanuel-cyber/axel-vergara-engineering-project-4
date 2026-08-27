@@ -1,5 +1,6 @@
 ---
 title: Semana 06 - Generación y selección de concepto
+layout: default
 parent: Semanas
 nav_order: 6
 ---

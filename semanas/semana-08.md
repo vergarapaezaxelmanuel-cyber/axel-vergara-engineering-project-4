@@ -1,5 +1,6 @@
 ---
 title: Semana 08 - UX/UI y vibe coding
+layout: default
 parent: Semanas
 nav_order: 8
 ---

@@ -1,5 +1,6 @@
 ---
 title: Semana 05 - PDS y arquitectura del sistema
+layout: default
 parent: Semanas
 nav_order: 5
 ---

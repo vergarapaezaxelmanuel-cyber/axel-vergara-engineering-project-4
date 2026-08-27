@@ -1,5 +1,6 @@
 ---
 title: Semana 02 - Búsqueda de oportunidades con IA
+layout: default
 parent: Semanas
 nav_order: 2
 ---

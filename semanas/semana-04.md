@@ -1,5 +1,6 @@
 ---
 title: Semana 04 - Mercado y análisis competitivo
+layout: default
 parent: Semanas
 nav_order: 4
 ---

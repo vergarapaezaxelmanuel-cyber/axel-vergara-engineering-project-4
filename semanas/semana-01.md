@@ -1,5 +1,6 @@
 ---
 title: Semana 01 - IA, innovación y creatividad
+layout: default
 parent: Semanas
 nav_order: 1
 ---

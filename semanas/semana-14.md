@@ -1,5 +1,6 @@
 ---
 title: Semana 14 - Semana de construcción / Peer review
+layout: default
 parent: Semanas
 nav_order: 14
 ---

@@ -1,5 +1,6 @@
 ---
 title: Semana 07 - Prototipado rápido e iteración
+layout: default
 parent: Semanas
 nav_order: 7
 ---

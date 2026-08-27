@@ -1,5 +1,6 @@
 ---
 title: Semana 09 - Viabilidad técnica y económica
+layout: default
 parent: Semanas
 nav_order: 9
 ---

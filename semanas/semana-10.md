@@ -1,5 +1,6 @@
 ---
 title: Semana 10 - Diseño para manufactura (DFM)
+layout: default
 parent: Semanas
 nav_order: 10
 ---

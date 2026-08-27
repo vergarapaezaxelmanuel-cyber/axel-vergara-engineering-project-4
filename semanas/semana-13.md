@@ -1,5 +1,6 @@
 ---
 title: Semana 13 - Integración del sistema
+layout: default
 parent: Semanas
 nav_order: 13
 ---

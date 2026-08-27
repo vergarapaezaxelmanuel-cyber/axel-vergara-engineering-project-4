@@ -1,5 +1,6 @@
 ---
 title: Proyecto Final
+layout: default
 nav_order: 4
 ---
 

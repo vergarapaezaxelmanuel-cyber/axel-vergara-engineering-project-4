@@ -1,5 +1,6 @@
 ---
 title: Semana 03 - Vigilancia tecnológica y PI
+layout: default
 parent: Semanas
 nav_order: 3
 ---

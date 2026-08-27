@@ -1,5 +1,6 @@
 ---
 title: Semana 12 - Go-to-market y pitch
+layout: default
 parent: Semanas
 nav_order: 12
 ---
