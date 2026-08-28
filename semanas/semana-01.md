@@ -9,7 +9,7 @@ nav_order: 1
 
 ## Lo que hice esta semana
 
-Lo que hice en esta semana fue el entender el proceso del cómo y la forma de hacer Prompts a la IA. Hicimos un ejercicio para familiarizarnos con estructurar un buen prompt y tuvimos respuestas muy interesantes. Al final el resultado fue que gracias a los prompts tuvimos ideas novedosas como el "Teléfono del Barrio", entre otros. Aprendí la importancia de un buen Prompt, el ritmo de trabajo en la materia y rumbo o tareas que vamos hacer durante el semestre.
+Lo que hice en esta semana fue el entender el proceso del cómo y la forma de hacer prompts a la IA. Hicimos un ejercicio para familiarizarnos con estructurar un buen prompt y tuvimos respuestas muy interesantes. Al final el resultado fue que gracias a los prompts tuvimos ideas novedosas como el "Teléfono del Barrio", entre otros. Aprendí la importancia de un buen prompt, el ritmo de trabajo en la materia y rumbo o tareas que vamos a hacer durante el semestre.
 
 ## Evidencias
 
