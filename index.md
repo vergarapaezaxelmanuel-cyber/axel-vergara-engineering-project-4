@@ -8,10 +8,6 @@ nav_order: 1
 
 Esta es mi página individual para el curso **Proyecto de Ingeniería IV** (Otoño 2026, Ibero Puebla).
 
-1. **Página web de lanzamiento**.
-2. **Producto físico con Inteligencia Artificial (IA)**.
-3. **Aplicación inteligente conectada al producto**.
-
 ## Navegación
 
 - [About me](./about.html) — quién soy, mi historia y hacia dónde voy.
