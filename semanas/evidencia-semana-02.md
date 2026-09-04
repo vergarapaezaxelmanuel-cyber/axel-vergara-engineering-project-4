@@ -429,8 +429,6 @@ H2: "Creemos que existen al menos 50,000 casos activos de tutela/interdicción e
 
 ## Paso 7 — Defensa final
 
-*(Texto propio de Axel, sin edición de contenido — solo ortografía.)*
-
 Identifiqué que los hijos adultos de 35 a 40 años que ayudan a administrar las finanzas de un padre mayor de 60-70 años tienen el problema de que se enteran demasiado tarde de cargos sospechosos. Como cargos tipo "card testing", suscripciones que se activaron por error o montos que el padre no reconoce.
 
 Hoy lo resuelven así: en el mejor caso, el banco bloquea la tarjeta y el padre pasa días esperando que le liberen el cargo. En el peor caso, el padre no ve la notificación, y cuando revisa su estado de cuenta el cargo ya está reflejado y el banco no puede hacer nada.
