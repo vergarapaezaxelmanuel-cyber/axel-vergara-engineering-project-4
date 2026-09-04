@@ -4,7 +4,7 @@ layout: default
 nav_order: 1
 ---
 
-# ¡Bienvenido/a! 👋
+# ¡Bienvenido/a! 
 
 Esta es mi página individual para el curso **Proyecto de Ingeniería IV** (Otoño 2026, Ibero Puebla).
 
@@ -19,4 +19,4 @@ Esta es mi página individual para el curso **Proyecto de Ingeniería IV** (Oto�
 - [Proyecto Final](./proyecto-final.html) — la entrega integrada al final del curso.
 - [Syllabus del curso](assets/docs/syllabus.pdf) — programa oficial de la materia (PDF).
 
-_(Reemplaza este texto por tu propia introducción: quién eres, el nombre de tu proyecto/producto, y una imagen o logo si ya lo tienes.)_
+Soy Axel Vergara Páez, estudiante de Ingeniería en Negocios en la Ibero Puebla. Este semestre estoy construyendo **Vigía**, una app que avisa a los hijos cuando aparece un cargo sospechoso en la cuenta bancaria de un padre o madre mayor, antes de que sea demasiado tarde para actuar. La idea nació de algo que le pasó a mi mamá, y en este sitio voy documentando cada semana el proceso completo: desde la validación de la oportunidad hasta el producto físico y la app conectada.
