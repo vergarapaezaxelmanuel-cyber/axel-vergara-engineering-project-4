@@ -10,9 +10,14 @@ nav_order: 2
 
 Mi nombre es Axel Manuel Vergara Páez, estoy cursando 7mo semestre de la carrera en Ingeniería en Negocios en la IBERO Puebla. Algo que me describa es que soy un poco inquieto, curioso y me encanta saber sobre los negocios y sobre la gente exitosa, incluso en el ámbito deportivo. Un ejemplo es entender el negocio del fútbol desde la perspectiva de comprar, ceder y vender jugadores.
 
+![Axel Vergara Páez](assets/images/about/perfil.jpg)
+
 ## Una historia personal interesante
 
 Me encanta viajar, probar cosas nuevas y enfrentarme a mis miedos. La primera vez que me subí a una montaña rusa tenía unos 12 años; el detalle estaba en que, debido a mi cabello rizado estilo afro, apenas cumplía con el requisito de altura. El resultado: me partí el labio durante el recorrido, pero esa experiencia hizo que me apasionaran las montañas rusas; ahora, siempre que tengo la oportunidad, me subo a una sin dudarlo.
+
+
+![Axel en la Torre Eiffel, París](assets/images/about/paris.jpg)
 
 ## Mis intereses y hobbies
 
