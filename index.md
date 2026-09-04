@@ -17,5 +17,6 @@ Esta es mi página individual para el curso **Proyecto de Ingeniería IV** (Oto�
 - [About me](./about.html) — quién soy, mi historia y hacia dónde voy.
 - [Semanas](./semanas/) — el registro semanal de avance, semana 1 a 16.
 - [Proyecto Final](./proyecto-final.html) — la entrega integrada al final del curso.
+- [Syllabus del curso](assets/docs/syllabus.pdf) — programa oficial de la materia (PDF).
 
 _(Reemplaza este texto por tu propia introducción: quién eres, el nombre de tu proyecto/producto, y una imagen o logo si ya lo tienes.)_
