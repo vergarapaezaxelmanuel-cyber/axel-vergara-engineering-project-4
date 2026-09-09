@@ -33,6 +33,12 @@ La conclusión: hay un riesgo de mediano plazo, no inmediato. Si un proveedor B2
 
 Practicar el protocolo de entrevista del Paso 6, identificar a las 3 personas que voy a entrevistar, hacer las entrevistas con notas textuales, y sintetizar los resultados con Claude para confirmar o ajustar el concepto.
 
+## Evidencia
+
+Como evidencia documento los prompts reales que usé en el Paso 3 y el Paso 5, y lo que me devolvió Claude en cada uno.
+
+[Ver el proceso completo (prompts y resultados) →](./evidencia-semana-03.html)
+
 ## Reflexión
 
 Otra vez el proceso no fue lineal: uno de mis tres finalistas de marca (Kuido) parecía el más fácil de pronunciar, pero la búsqueda real en el IMPI lo descartó por completo al encontrar una marca idéntica ya registrada en un giro conceptualmente parecido al mío. Verificar en la fuente oficial, en vez de quedarme con la evaluación inicial, cambió la decisión más de una vez esta semana.
