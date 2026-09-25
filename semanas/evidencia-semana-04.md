@@ -137,7 +137,7 @@ nav_exclude: true
 
 ### Ronda 11 — Cierre del plan de validación externa y decisión sobre la tarea no hecha
 
-> Aclaré que, de las 2 entrevistas con profesores planeadas, José cubrió una (aunque no es literalmente un profesor, sí es un contacto externo a mis núcleos familiares); la segunda no se pudo hacer. Dije que me gustaría seguir recabando entrevistas para pulir el proyecto: una más de perfil similar a José (hijo/a, externo) y otra de perfil similar a María (padre/madre, de una familia distinta a la mía). Sobre la tarea de leer la propuesta de valor en voz alta a un compañero, aclaré que no se llevó a cabo porque no se hizo en clase, y pregunté si debía marcarse como "no hecho" o quitarse de la página, dejando la decisión abierta.
+> Aclaré que, de las 2 entrevistas con profesores planeadas, José cubrió una — José sí es uno de mis profesores, es un contacto externo a mis núcleos familiares; la segunda no se pudo hacer. Dije que me gustaría seguir recabando entrevistas para pulir el proyecto: una más de perfil similar a José (hijo/a, externo) y otra de perfil similar a María (padre/madre, de una familia distinta a la mía). Sobre la tarea de leer la propuesta de valor en voz alta a un compañero, aclaré que no se llevó a cabo porque no se hizo en clase, y pregunté si debía marcarse como "no hecho" o quitarse de la página, dejando la decisión abierta.
 
 **Resultado:** se actualizó el plan de próximos pasos en el documento de validación y en `semana-04.md` con las 2 entrevistas nuevas ya definidas (perfil José, perfil María). Sobre la tarea no hecha, se decidió mantenerla visible marcada como "pendiente, no hecho" en vez de quitarla — es más honesto frente al profesor mostrar una tarea de la plantilla que no se alcanzó a hacer, que borrarla como si nunca hubiera existido.
 
@@ -146,6 +146,12 @@ nav_exclude: true
 > Aclaré: "lo del segmento, los profes sí son de 60 a 70, pero los hijos son de 24 a la edad que sea, siempre y cuando ya generen o tengan ingresos, ¿no es lo que habíamos quedado?"
 
 **Resultado:** se confirmó contra mi propio prompt de la Ronda 2 de la Parte 2 ("Esté sería el nuevo segmento: hijo con ingreso propio, 24 años en adelante, padre/madre 60-70"), guardado palabra por palabra en este mismo registro. Tenía razón: tanto `semana-04.md` como el Canvas de Mercado del otro chat habían convertido mi criterio real (24 en adelante, con ingreso propio, sin tope) en un rango cerrado basado solo en las edades observadas en mis entrevistas — primero 24-32, luego 24-38 al agregar a José. Se corrigió la sección de Segmento Accionable para volver al criterio real: sin edad tope, el límite es tener ingreso propio; el rango 24-38 se deja solo como lo que mi muestra ha cubierto hasta ahora, no como la definición del segmento.
+
+### Ronda 13 — Confirmación: José sí es literalmente uno de mis profesores
+
+> Confirmé: "Sí es uno de mis profesores, me da una materia, pero me interesó preguntarle porque él justo cubre con las edades, ¿no? Porque tiene 38, su mamá, si mal no me acuerdo, en una de esas fallé con el dato, pero según yo tenía 67, entonces era como alguien que no es tan cercano, porque pues nada más es mi profe, pero cumple con los requisitos que... Siento yo que es el segmento real de la aplicación de mi proyecto de Vigilio."
+
+**Resultado:** se corrigió la cobertura anterior, que decía "José... no es literalmente un profesor" — sí lo es (me da una materia); lo entrevisté a propósito porque cumplía el perfil de edad (38 años, mamá de 67, dato que se mantuvo consistente). Sigue contando como validación externa a mis núcleos familiares porque, aunque hay relación de clase, no es alguien cercano fuera de eso. Con esto, el plan original de "2 entrevistas con profesores" (Ronda 5) queda cubierto en su sentido literal, no solo aproximado, en una de las dos. Se corrigió la frase en `semana-04.md`, en este registro (Ronda 11) y se marcó la misma corrección pendiente en `resultado-validacion-semana3.md` y `registro-prompts-semana4.md` del Proyecto.
 
 ---
 
