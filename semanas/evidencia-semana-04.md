@@ -141,6 +141,12 @@ nav_exclude: true
 
 **Resultado:** se actualizó el plan de próximos pasos en el documento de validación y en `semana-04.md` con las 2 entrevistas nuevas ya definidas (perfil José, perfil María). Sobre la tarea no hecha, se decidió mantenerla visible marcada como "pendiente, no hecho" en vez de quitarla — es más honesto frente al profesor mostrar una tarea de la plantilla que no se alcanzó a hacer, que borrarla como si nunca hubiera existido.
 
+### Ronda 12 — Corrección de la definición del segmento (edad tope vs. ingreso propio)
+
+> Aclaré: "lo del segmento, los profes sí son de 60 a 70, pero los hijos son de 24 a la edad que sea, siempre y cuando ya generen o tengan ingresos, ¿no es lo que habíamos quedado?"
+
+**Resultado:** se confirmó contra mi propio prompt de la Ronda 2 de la Parte 2 ("Esté sería el nuevo segmento: hijo con ingreso propio, 24 años en adelante, padre/madre 60-70"), guardado palabra por palabra en este mismo registro. Tenía razón: tanto `semana-04.md` como el Canvas de Mercado del otro chat habían convertido mi criterio real (24 en adelante, con ingreso propio, sin tope) en un rango cerrado basado solo en las edades observadas en mis entrevistas — primero 24-32, luego 24-38 al agregar a José. Se corrigió la sección de Segmento Accionable para volver al criterio real: sin edad tope, el límite es tener ingreso propio; el rango 24-38 se deja solo como lo que mi muestra ha cubierto hasta ahora, no como la definición del segmento.
+
 ---
 
 ## Retroalimentación del profesor y cómo se resolvió
