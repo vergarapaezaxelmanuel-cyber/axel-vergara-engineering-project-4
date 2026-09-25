@@ -9,7 +9,7 @@ nav_exclude: true
 
 **Nota de privacidad:** las personas entrevistadas son mi familia y amigos, así que aquí solo uso su primer nombre, aunque mis notas originales tenían el nombre completo.
 
-**Nota de fidelidad:** este registro mezcla dos tipos de entrada. 🟡 significa reconstruido a partir de un resumen automático de la conversación (la sesión se comprimió por límite de contexto antes de armar este documento, así que no es el texto exacto palabra por palabra, aunque el resumen que lo generó decía tener fidelidad cercana a verbatim). 🟢 significa texto real, palabra por palabra, disponible en la misma conversación. Toda la Parte 1 (entrevistas) es 🟡; toda la Parte 2 (Canvas y Propuesta de Valor) es 🟢, salvo la solicitud inicial del Canvas.
+**Nota de fidelidad:** este registro mezcla dos tipos de entrada. 🟡 significa reconstruido a partir de un resumen automático de la conversación (la sesión se comprimió por límite de contexto antes de armar este documento, así que no es el texto exacto palabra por palabra, aunque el resumen que lo generó decía tener fidelidad cercana a verbatim). 🟢 significa texto real, palabra por palabra, disponible en la misma conversación. Toda la Parte 1 (entrevistas) es 🟡, salvo la Ronda 6, que es 🟢; toda la Parte 2 (Canvas y Propuesta de Valor) es 🟢, salvo la solicitud inicial del Canvas.
 
 ---
 
@@ -48,6 +48,12 @@ nav_exclude: true
 > Expliqué el plan de entrevistar la próxima semana a al menos 2 profesores de ~30 años, con padres que hayan vivido algo similar, fuera del círculo familiar, para validar Hipótesis 2 de forma independiente (retrasado porque esa semana no hubo clase el día agendado); mencioné que considero los hallazgos de la entrevistada madre los más importantes hasta ahora.
 
 **Resultado:** se actualizó el documento de validación para registrar las 2 entrevistas con profesores como plan confirmado y fechado, explícitamente como "pendiente por hacer, no hecho todavía".
+
+### Ronda 6 — Novena entrevista (José) y hallazgo de la condición regulatoria 🟢
+
+> Subí el PDF con las 8 entrevistas anteriores más una nueva, con el mensaje: *"es ya la entrevista incluyendo la octava entrevista con José y es como la entrevista de un hijo todavía me faltaría como hacer entrevistas para los papás para incluso ver co- qué cosas podría modificar que ellos no se sientan como afectados más bien protegidos Entonces, eso todavía está como en desarrollo las entrevistas."*
+
+**Resultado:** se agregó José (38 años, madre de 67) como novena entrevista de mi validación — no estaba en la ronda anterior. Se actualizaron las tablas de Hipótesis 1/3 (disposición a pagar: 4 de 7 de mi núcleo de hijos/as, sin contar al entrevistado fuera de rango), se evaluó con el mismo criterio ya usado con Paulina la frecuencia de José (marcada "No" por consistencia metodológica, no como excepción), y se revisó la posible superposición familiar con los núcleos ya identificados — sin evidencia suficiente para confirmarla ni descartarla del todo. Hallazgo principal, no anticipado: José fue el primero de mis 9 entrevistas en poner el respaldo regulatorio o legal ("verificar que lo que se ofrece está en la normativa") como condición para usar la alerta — y lo hizo del lado del hijo/a comprador, no solo como algo esperable del lado del padre/madre. Esto conecta con mi análisis de confianza y privacidad (autorización de Belvo ante la CNBV) y con la Objeción 1 de mi Canvas de Mercado, sección de Propuesta de Valor.
 
 ---
 
@@ -107,7 +113,7 @@ nav_exclude: true
 
 **Resultado:** se validó la aclaración contra una fuente ya citada desde el Reporte de Semana 2 (Mastercard Newsroom, 2024), que describe el card testing como algo que se hace con "una tarjeta robada" — coherente con la lectura de "clonación como causa". Pero se detectó que mi versión de la Ronda 5 tenía la causalidad al revés (card testing → clonación), cuando lo correcto es clonación → card testing/suscripciones. Se corrigió la dirección de la frase en el documento, no solo el vocabulario.
 
-### Ronda 8 — Verificación de la página real del profesor y respuesta a la pregunta de cierre 🟢
+### Ronda 8 — Verificación de la página real del profesor y respuesta a la pregunta de cierre
 
 > Envié una captura de pantalla de la página real de mi profesor para Semana 4 ("Semana 4 — Mercado, valor y propuesta de valor"), preguntando: *"Pero en mi tarea de semana 4 así viene, ¿no?"*.
 
@@ -117,8 +123,34 @@ nav_exclude: true
 
 **Resultado:** con la versión real "de antes de Claude" ya en mano, se diagnosticó contra los tres errores oficiales: comete claramente el Error 2 (dirigirse a todos — "problemas de tu papá" no especifica cuáles, y "más rápida y eficiente" le queda a cualquier app) y el Error 3 (no contrasta con la alternativa — no dice qué hago hoy sin el producto ni por qué es mejor). El Error 1 (confundir feature con valor) no aplica de la forma clásica, porque la versión original no describe ninguna función técnica — es pura frase de beneficio sin mecanismo detrás, el problema inverso al Error 1. Se documentó la respuesta completa en el Canvas de Mercado, y se dejó la comparación explícita con la versión final (usuario, problema y competidor ya nombrados) como la evidencia de mejora que pide la pregunta de cierre.
 
+### Ronda 9 — Comparaciones con Perplexity (competidores y Blue Ocean) y resolución
+
+> Pedí comparar, por separado, un análisis de competidores (modelo de Porter) y un análisis de Blue Ocean (matriz ERRC) hechos con Perplexity, contra lo ya construido en mi Canvas de Mercado.
+
+**Resultado:** se generaron dos documentos de comparación, señalando dónde Perplexity aportaba algo real (matriz ERRC completa, "cuenta conjunta"/"tarjeta prepagada" como sustitutos y columnas, asesores/contadores/abogados como indirectos) y dónde había que corregirle o no copiarlo tal cual (conflicto con el stack ya decidido sobre IA generativa vs. reglas, pérdida de precisión frente a la tabla ya existente, omisión de "confianza/marca", contenido genérico sin anclaje a entrevistas). Se resolvieron ambos ese mismo día: se aplicaron los cambios recomendados a las secciones de Mapa Competitivo y Lienzo Blue Ocean del Canvas (con matices — "directos potenciales" separado de los directos confirmados, la fintech mexicana marcada como hipótesis no confirmada), y el conflicto de IA generativa vs. reglas se resolvió sin pivotear el stack (se redujo la complejidad de categorías, no el tipo de modelo).
+
+### Ronda 10 — Confirmación de la Objeción 1 (comprador único) y novena entrevista
+
+> Confirmé que acepto la Objeción 1 pendiente (el hijo/a como único comprador en la propuesta de valor de plantilla), y subí la novena entrevista (José) como evidencia adicional — ver Ronda 6 de la Parte 1 arriba para el detalle completo de ese hallazgo.
+
+**Resultado:** se cerró la Objeción 1 en el Canvas de Mercado, incorporando la cita real de José sobre la condición regulatoria como evidencia (antes solo se mencionaba como pendiente de confirmar).
+
+### Ronda 11 — Cierre del plan de validación externa y decisión sobre la tarea no hecha
+
+> Aclaré que, de las 2 entrevistas con profesores planeadas, José cubrió una (aunque no es literalmente un profesor, sí es un contacto externo a mis núcleos familiares); la segunda no se pudo hacer. Dije que me gustaría seguir recabando entrevistas para pulir el proyecto: una más de perfil similar a José (hijo/a, externo) y otra de perfil similar a María (padre/madre, de una familia distinta a la mía). Sobre la tarea de leer la propuesta de valor en voz alta a un compañero, aclaré que no se llevó a cabo porque no se hizo en clase, y pregunté si debía marcarse como "no hecho" o quitarse de la página, dejando la decisión abierta.
+
+**Resultado:** se actualizó el plan de próximos pasos en el documento de validación y en `semana-04.md` con las 2 entrevistas nuevas ya definidas (perfil José, perfil María). Sobre la tarea no hecha, se decidió mantenerla visible marcada como "pendiente, no hecho" en vez de quitarla — es más honesto frente al profesor mostrar una tarea de la plantilla que no se alcanzó a hacer, que borrarla como si nunca hubiera existido.
+
+---
+
+## Retroalimentación del profesor y cómo se resolvió
+
+Mi profesor dejó comentarios individuales por alumno en un canal de clase. El comentario dirigido a mí fue: *"Muy ordenada tu página, aunque austera me gustó. MUY bien auditar los datos que te da la IA. Genial que ya tengas tu slogan. Tienes que trabajar más tu propuesta de valor. No trabajaste la pirámide de Bain, creo que de ahí puedes construir una mejor propuesta."*
+
+De ahí salieron dos bloques de trabajo: la Ronda 6 de la Parte 1 (mi novena entrevista, José, que aportó el hallazgo de la condición regulatoria) y la Pirámide de Bain que ya está en la sección de Propuesta de Valor del Canvas, con sus 4 niveles trabajados con evidencia real de mis entrevistas (Almquist et al., 2016) — es la respuesta directa a "no trabajaste la pirámide de Bain". También hasta ahora tenía trabajo de mercado que solo vivía en mi Proyecto de Claude, no en mi página en vivo — mi profesor dejó una nota general en el mismo canal de que todo debe estar en la misma página, sin enlaces externos a chats o documentos. Por eso todo este contenido —Pirámide de Bain, novena entrevista, comparación con Perplexity— se sube completo a `semana-04.md`, no se deja solo como referencia.
+
 ---
 
 ## Nota final sobre cómo presentarlo
 
-Este registro cubre dos bloques con una diferencia real de proceso: la Parte 1 (entrevistas) fue trabajo de campo mío, con Claude ayudando a leer los resultados contra criterios que yo mismo había pre-registrado desde la Semana 2 — y varias veces la lectura cambió de forma honesta según llegaba más muestra. La Parte 2 (Canvas y Propuesta de Valor) fue más iterativa: 7 rondas reales sobre el mismo texto, con al menos tres tipos de corrección en el camino — ortografía y gramática constante por el dictado de voz, una afirmación técnica falsa que se corrigió antes de llegar a la versión final ("no llega a la nube"), y un error de nombre de marca que vino de Claude, no de mí, y que se reconoció como tal.
+Este registro cubre dos bloques con una diferencia real de proceso: la Parte 1 (entrevistas) fue trabajo de campo mío, con Claude ayudando a leer los resultados contra criterios que yo mismo había pre-registrado desde la Semana 2 — y varias veces la lectura cambió de forma honesta según llegaba más muestra (la disposición a pagar se veía peor con 3-4 entrevistas que con 6, y volvió a subir con la novena). La Parte 2 (Canvas y Propuesta de Valor) fue más iterativa: varias rondas reales sobre el mismo texto, con al menos tres tipos de corrección en el camino — ortografía y gramática constante por el dictado de voz, una afirmación técnica falsa que se corrigió antes de llegar a la versión final ("no llega a la nube"), y un error de nombre de marca que vino de Claude, no de mí, y que se reconoció como tal. Es una historia de iteración real y defendible frente a un profesor, más creíble que presentar el resultado final como si hubiera salido así desde el primer intento — y la retroalimentación real que recibí después solo confirma que ese proceso de ida y vuelta es lo que el curso espera ver.
