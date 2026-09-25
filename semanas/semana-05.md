@@ -47,7 +47,7 @@ La decisión de dónde corre el modelo de IA quedó en **Cloud**, justificada en
 
 Diagrama de arquitectura (3 capas — origen de datos, datos, presentación):
 
-![Arquitectura del sistema — Vigilio (adaptada, sin capa física)](/assets/images/arquitectura-vigilio-semana5.png)
+![Arquitectura del sistema — Vigilio (adaptada, sin capa física)](../assets/images/arquitectura-vigilio_final.png)
 
 Sobre esta arquitectura hice dos ajustes después de la primera versión, los dos motivados por preguntas que me hice yo mismo, no por instrucción externa:
 
