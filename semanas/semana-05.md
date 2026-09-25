@@ -30,14 +30,49 @@ Esa segunda auditoría confirmó los dos hallazgos anteriores y encontró cuatro
 
 El PDS final quedó en **22 requerimientos** — 4 funcionales originales + 2 nuevos (RF-05, RF-06), 4 de desempeño, 4 de interfaz + 1 nuevo (RI-05), y 6 de restricción + 1 nuevo (RR-07, que fusiona retención/cifrado y eliminación al revocar consentimiento, en vez de dejarlos como dos requerimientos redundantes).
 
-Algunos ejemplos representativos, uno por categoría:
+Los 22 requerimientos finales, con su enunciado resumido y su criterio de verificación:
 
-| Categoría | Requerimiento | Enunciado (resumido) |
+**Funcionales**
+
+| Req. | Enunciado (resumido) | Verificación |
 |---|---|---|
-| Funcional | RF-01 | Detectar y clasificar transacciones nuevas en al menos 3 categorías de anomalía, usando un modelo de lenguaje vía API con ejemplos de referencia. |
-| Desempeño | RD-01 | Entregar la alerta al hijo/a en un plazo máximo definido desde que Belvo reporta la transacción (sujeto a validar con el piloto). |
-| Interfaz | RI-01 | Integrarse con Belvo exclusivamente en modo de solo lectura, soportando más de un banco por padre/madre. |
-| Restricción | RR-01 | Requerir consentimiento explícito, informado y revocable del padre/madre; limitar lo que el hijo/a ve exclusivamente a alertas ya clasificadas, nunca a movimientos completos. |
+| RF-01 | Clasificar las transacciones del padre/madre en cargo inusual, card testing o suscripción no reconocida. | % mínimo de aciertos sobre transacciones de prueba en Sandbox. |
+| RF-02 | Alertar solo al hijo/a, con los datos del cargo; permitir marcar "reconocida"/"no reconocida". | Alerta entregada a tiempo (RD-01) y respuesta registrada. |
+| RF-03 | Mostrar guía de resolución según el tipo de anomalía. | Cada categoría tiene una guía distinta, verificable en pruebas manuales. |
+| RF-04 | Dar al padre/madre su propia vista: cuentas, alcance, consentimiento, revocación. | El padre/madre revoca el acceso sin ayuda del hijo/a. |
+| RF-05 | Flujo de conexión inicial de la cuenta y captura de consentimiento. | El hijo/a completa el flujo solo, sin ayuda del equipo. |
+| RF-06 | Reintentar y avisar del retraso si falla Belvo o el clasificador. | Falla simulada produce reintento y aviso al hijo/a. |
+
+**Desempeño**
+
+| Req. | Enunciado (resumido) | Verificación |
+|---|---|---|
+| RD-01 | Alertar dentro de un plazo máximo desde la transacción. | Medición de tiempo en muestra de prueba (sin cifra validada aún). |
+| RD-02 | Mantener la tasa de falsos positivos bajo un límite. | % de alertas marcadas "reconocida" sobre el total, en el piloto. |
+| RD-03 | Mantener una disponibilidad mínima del sistema. | Registro de tiempo de actividad durante el piloto. |
+| RD-04 | Procesar varias cuentas a la vez sin degradar RD-01. | Prueba de carga con el número de cuentas definido, en Sandbox. |
+
+**Interfaz**
+
+| Req. | Enunciado (resumido) | Verificación |
+|---|---|---|
+| RI-01 | Integrarse con Belvo solo en modo lectura, con soporte multi-banco. | Revisión de permisos + prueba conectando dos bancos. |
+| RI-02 | Notificar por push o correo (WhatsApp fuera de alcance este semestre). | La notificación llega por al menos uno de los dos canales. |
+| RI-03 | Ofrecer mínimo 4 pantallas para el hijo/a. | Las pantallas existen y son navegables en el prototipo. |
+| RI-04 | Mostrar la autorización regulatoria del proveedor de datos. | Pantalla accesible, verificable por inspección directa. |
+| RI-05 | Accesibilidad mínima en la vista del padre/madre. | Prueba de usabilidad con una persona de 60+ años. |
+
+**Restricción**
+
+| Req. | Enunciado (resumido) | Verificación |
+|---|---|---|
+| RR-01 | Consentimiento explícito y revocable; el hijo/a solo ve alertas, nunca movimientos completos. | Registro auditable de consentimiento (fecha, alcance, revocación). |
+| RR-02 | Producto exclusivamente software, dentro del stack y plazo del semestre. | Cada entregable se verifica contra el plan de fases. |
+| RR-03 | El hijo/a no puede bloquear ni aprobar transacciones. | Revisión de la interfaz: solo confirmación, nunca control de gasto. |
+| RR-04 | No presentar a Vigilio como regulado directamente. | Revisión de los textos de la app y la página de lanzamiento. |
+| RR-05 | Compatibilidad mínima Android 8+ / iOS 14+. | Prueba en al menos un dispositivo de cada sistema. |
+| RR-06 | Primera versión funcional lista a más tardar en Semana 7. | Demo del flujo completo (transacción → alerta) en esa semana. |
+| RR-07 | Cifrado y eliminación de datos al revocar el consentimiento. | Revisión de cifrado + prueba de revocación real. |
 
 ## La arquitectura: adaptada de un producto físico a uno que no lo es
 
