@@ -8,13 +8,13 @@ nav_order: 7
 # Semana 07 - Modelo de Negocio y Viabilidad Económica
 
 **Periodo:** Semana 7 del semestre
-**Estado:** Bloques 2 (modelos de negocio) y 3 (costos) completos y verificados contra fuentes oficiales. Bloque 4 (matemáticas financieras) y Bloque 5 (taller en clase) quedan pendientes para una sesión posterior.
+**Estado:** cerrado — Bloques 2 (modelos de negocio), 3 (costos), 4 (matemáticas financieras) y 5 (taller del modelo económico) completos, con cifras verificadas contra fuentes oficiales.
 
 **Nota de privacidad:** esta página no incluye nombres completos de personas ni enlaces personales de nadie fuera de mí. Cuando menciono a mi profesor, lo hago sin su nombre, igual que en semanas anteriores.
 
 ## Lo que hice esta semana
 
-El viernes en clase corrimos el ejercicio de modelos de negocio con benchmarking de competidores, usando Perplexity en vez de Claude. Después de clase me tocó la parte de viabilidad económica: adaptar el BOM del curso (pensado para hardware) a los servicios que realmente consume Vigilio, calcular el costo real de la IA con la fórmula del curso, calcular el costo de un ciclo de aprendizaje completo, y clasificar todos los costos con el criterio D/F/S — primero en su versión simple, y después en su versión extendida de crear vs. distribuir la oferta, donde encontré algo que no había quedado documentado en ningún lugar del proyecto hasta ahora.
+El viernes en clase corrimos el ejercicio de modelos de negocio con benchmarking de competidores, usando Perplexity en vez de Claude. Después de clase me tocó la parte de viabilidad económica: adaptar el BOM del curso (pensado para hardware) a los servicios que realmente consume Vigilio, calcular el costo real de la IA con la fórmula del curso, calcular el costo de un ciclo de aprendizaje completo, y clasificar todos los costos con el criterio D/F/S — primero en su versión simple, y después en su versión extendida de crear vs. distribuir la oferta, donde encontré algo que no había quedado documentado en ningún lugar del proyecto hasta ahora. Ya con todos los costos en orden, cerré la semana con el modelo económico completo: punto de equilibrio, precio de venta por dos métodos distintos, flujo de caja proyectado a 12 meses y valor presente neto — y también llené la plantilla oficial de costos del curso en Excel, siguiendo su misma estructura.
 
 ## Modelos de negocio: lo que hace la competencia (y lo que Perplexity se equivocó)
 
@@ -93,8 +93,11 @@ El 94% del costo de un ciclo es mi propio tiempo, no gasto en efectivo — se va
 | Belvo (agregador de open banking) | **S** |
 | Firebase Cloud Messaging / SMTP | **S** |
 | GitHub Pages | **S** |
+| Seguridad y cumplimiento de datos (cifrado, retención RR-07, aviso de privacidad LFPDPPP) | **S** |
 
-Solo 2 de 7 costos caen en D, que según el propio criterio del curso es una señal sana. Si el presupuesto necesita recortarse, el primer candidato es Bubble —ya evaluado contra FlutterFlow como alternativa real—, nunca el clasificador ni la lógica de escalamiento, que son el producto en sí.
+Agregué esta última fila porque la revisión del PDS de Semana 5 ya había detectado un vacío sin resolver —ningún requerimiento fijaba el estándar de cifrado ni el procedimiento de eliminación de datos al revocarse el consentimiento—, y aquí por fin le puse número: $1,600 a $3,000 MXN de trabajo único de implementación. Es S y no F porque la obligación la impone la LFPDPPP y la condición de Belvo como entidad regulada, no una decisión de negocio que yo pueda recortar.
+
+Solo 2 de 8 costos caen en D, que según el propio criterio del curso es una señal sana. Si el presupuesto necesita recortarse, el primer candidato es Bubble —ya evaluado contra FlutterFlow como alternativa real—, nunca el clasificador, la lógica de escalamiento, ni la seguridad y cumplimiento, que no es negociable.
 
 ## Crear vs. distribuir: el hallazgo que no estaba documentado
 
@@ -102,9 +105,35 @@ El curso distingue entre los costos de construir la oferta y los costos de hacer
 
 Con Stripe como pasarela de pago, el costo combinado de cobrar una suscripción es de aproximadamente 7% (3.6% + $3.00 MXN + 0.7% de Stripe Billing). Publicar nativo en las tiendas de apps agrega encima una comisión de plataforma de 15% a 30% sobre cada cobro — es decir, adoptar distribución nativa sin pensarlo multiplicaría por 3 a 5 veces el costo de cada cobro, sin ninguna mejora de producto a cambio a esta escala. Mi recomendación es mantener Vigilio como web/PWA, con la misma lógica que ya usé para Bubble sobre FlutterFlow y para Sandbox sobre Production de Belvo: menos piezas moviéndose. Lo documento como decisión tomada, no como pendiente — no cuesta nada decidirlo ahora, y si lo dejo sin decidir es fácil que termine publicando en las tiendas por default y pagando la comisión más alta sin darme cuenta.
 
+## El modelo económico completo: punto de equilibrio, precio y flujo de caja
+
+Con todos los costos ya clasificados, armé el modelo económico completo que pide el curso, adaptando "recuperar el costo del hardware" por "recuperar la inversión en desarrollo" (los $28,638.15 MXN de ciclos de aprendizaje más seguridad y cumplimiento).
+
+**Margen de contribución:** precio ($99 MXN) menos costo variable por cuenta (IA + comisión de Stripe, $7.38 MXN) = **$91.62 MXN/cuenta/mes**.
+
+**Punto de equilibrio.** Solo para cubrir costos operativos mensuales (Bubble + dominio, $1,055.75 MXN/mes), necesito **12 cuentas pagando** — alcanzable dentro del rango de piloto (20-30 cuentas). Pero si quiero recuperar también la inversión inicial de desarrollo en 12 meses, necesito **38 cuentas** — eso ya se sale del techo que el propio proyecto se fijó (RD-04). No es que el modelo esté roto: es que el piloto está diseñado para validar el producto, no para ser rentable todavía.
+
+**Precio de venta, por dos métodos, contra el ya validado:**
+
+| Método | A 10 cuentas | A 100 cuentas |
+|---|---|---|
+| Cost-plus (margen 40%) | $492.25 MXN/mes | $58.53 MXN/mes |
+| Value-based (ancla de un caso real de $8,500 MXN/año en cargos hormiga) | hasta $70.83 MXN/mes | — |
+| **Precio ya validado por entrevista** | **$99 MXN/mes** | **$99 MXN/mes** |
+
+Ninguno de los dos métodos nuevos debería reemplazar el precio ya validado: el cost-plus a escala de piloto pide casi 5 veces más porque reparte una inversión fija entre muy pocas cuentas, y el value-based se apoya en un solo caso extremo, no en un promedio confiable. Mantengo los $99 MXN/mes.
+
+**Flujo de caja a 12 meses.** Con una rampa de adopción razonada (0 cuentas los primeros 3 meses, mientras ajusto el clasificador; creciendo hasta 25 en el mes 12), el flujo mensual se vuelve positivo a partir del **mes 8**, pero el acumulado sigue en negativo al cierre del año: **-$29,946.27 MXN**. La VPN a 12 meses, con una tasa de descuento del 15% anual, es **-$30,218.08 MXN**.
+
+Ninguno de estos dos números negativos es una alarma por sí mismo — es lo esperado cuando divides una inversión fija entre un piloto topado deliberadamente en 20-30 cuentas, dentro del horizonte de un solo semestre.
+
+**Dónde está la palanca real.** El costo de la IA es irrelevante para el margen (menos del 2% del costo unitario a cualquier escala) — ahí no hay nada que optimizar. El verdadero cuello de botella es que estoy repartiendo una inversión fija entre muy pocos usuarios, porque el piloto es chico por diseño académico. Las palancas que de verdad cierran la aritmética son escalar hacia el mercado objetivo real (304 a 608 hogares) y aceptar que recuperar la inversión toma más de un semestre — no bajarle al costo de la IA, que ya es insignificante, ni subir el precio, que ya está validado con evidencia real.
+
+También resolví los 9 ejercicios genéricos de valor del dinero en el tiempo, VPN y TIR del material del curso (VF con capitalización trimestral, VP de una obligación futura, flujos mixtos e irregulares, comparación de proyectos, análisis de sensibilidad, y una verificación por cálculo exacto del ejercicio de TIR resuelto por interpolación lineal del material: mi cálculo da ≈17.95% contra el ≈18.2% del material, diferencia esperada por el método de aproximación). El detalle completo está en la evidencia.
+
 ## Lo que cambió
 
-Esta semana el patrón de "verificar antes de confiar" se repitió, pero esta vez no fue sobre mi propio trabajo (como el boceto técnico de Semana 6), sino sobre la herramienta que usé en clase: Perplexity se equivocó en precios concretos y en una afirmación de fondo (Carefull sí tiene modelo B2B), y si no hubiera verificado contra las fuentes oficiales habría llevado a clase un argumento que un competidor real ya contradice. También me quedó más claro que en un producto bancario, el costo de que el producto "no se use" no es un problema de retención cualquiera — es un fraude real sin detectar, y eso cambia qué modelo de ingresos conviene preferir.
+Esta semana el patrón de "verificar antes de confiar" se repitió, pero esta vez no fue sobre mi propio trabajo (como el boceto técnico de Semana 6), sino sobre la herramienta que usé en clase: Perplexity se equivocó en precios concretos y en una afirmación de fondo (Carefull sí tiene modelo B2B), y si no hubiera verificado contra las fuentes oficiales habría llevado a clase un argumento que un competidor real ya contradice. También me quedó más claro que en un producto bancario, el costo de que el producto "no se use" no es un problema de retención cualquiera — es un fraude real sin detectar, y eso cambia qué modelo de ingresos conviene preferir. Pero el hallazgo más importante de toda la semana fue el del modelo económico: no fue ningún número individual, sino entender dónde está realmente el riesgo. No es el costo de la IA (insignificante), es el tamaño del piloto diluyendo una inversión fija entre muy pocos usuarios — y estuve a punto de inflar ese problema agregando un costo de "construcción inicial" que, al revisarlo con cuidado, ya estaba contado dentro del primer ciclo de aprendizaje.
 
 ## Referencias (APA-7)
 
@@ -128,10 +157,12 @@ Stripe. (2026). *Precios de Stripe en México*. https://stripe.com/mx/pricing
 
 Universe Page. (2026). *¿Cuánto cobrar por una página web en México en 2026? Precios reales y calculadora gratuita*. https://universepage.com.mx/blog/tarifa-desarrollador-web-freelance-mexico
 
+Vergara Páez, A. (2026). *Resultados de validación — entrevistas Semana 3* [Documento de proyecto, Vigilio]. Ibero Puebla.
+
 Wealth Management. (2026). *Preventing elder fraud: Nationwide partners with Carefull*. https://www.wealthmanagement.com/financial-technology/preventing-elder-fraud-nationwide-partners-with-carefull
 
 ## Evidencia
 
-Como evidencia documento el prompt real de modelos de negocio (con la adaptación que hice), el resultado completo de Perplexity, la verificación contra fuentes oficiales, y el desglose completo de las tablas de BOM, costo de la IA, ciclos de aprendizaje y diferenciación de costos.
+Como evidencia documento el prompt real de modelos de negocio (con la adaptación que hice), el resultado completo de Perplexity, la verificación contra fuentes oficiales, el desglose completo de las tablas de BOM, costo de la IA, ciclos de aprendizaje y diferenciación de costos, y el modelo económico completo (punto de equilibrio, precios, flujo de caja, VPN y los 9 ejercicios del material).
 
 [Ver el proceso completo (prompts y resultados) →](./evidencia-semana-07.html)

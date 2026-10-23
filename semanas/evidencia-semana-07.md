@@ -164,8 +164,9 @@ Escenario máximo (8 ciclos):   $5,267.63 × 8 = $42,141.04 MXN
 | Belvo (agregador de open banking) | **S** | Infraestructura regulada de un tercero (IFPE ante la CNBV), sin control sobre precio ni condiciones. |
 | Firebase Cloud Messaging / SMTP | **S** | Infraestructura de notificación estándar, gratuita, sin margen de negociación. |
 | GitHub Pages | **S** | Hosting gratuito y estándar, sin diferenciación posible. |
+| Seguridad y cumplimiento de datos (cifrado en reposo, retención RR-07, aviso de privacidad LFPDPPP) | **S** | Obligación impuesta por la LFPDPPP y por la condición de Belvo como entidad regulada — no es una decisión de negocio que el equipo pueda recortar, aunque la forma específica de implementarla sí se decide internamente. Cubre la revisión del PDS de Semana 5 que había detectado este vacío sin costo asignado (RR-01, RR-07). Costo: 8-15h × $200 MXN/h = $1,600 a $3,000 MXN, único, no recurrente. |
 
-**Lectura del resultado:** solo 2 de 7 costos caen en D — señal sana según el propio criterio del curso. Si el presupuesto necesita recortarse, el primer candidato es Bubble (F), nunca el clasificador ni la lógica de escalamiento.
+**Lectura del resultado:** solo 2 de 8 costos caen en D — señal sana según el propio criterio del curso. Si el presupuesto necesita recortarse, el primer candidato es Bubble (F), nunca el clasificador, la lógica de escalamiento, ni la seguridad y cumplimiento (S), que no es negociable.
 
 ## Paso 6 — Crear vs. distribuir la oferta (D/F/S extendido) 🟢
 
@@ -182,6 +183,7 @@ Distinción adicional del curso entre costos de construir Vigilio y costos de ha
 | Bubble (builder no-code) | **F** | $1,037 MXN/mes | 1 mes | ≈$35-52 MXN/cuenta/mes | Negociable; primer candidato a recorte. |
 | Personal (horas por ciclo de aprendizaje) | **F** | $5,267.63 MXN/ciclo | 1 ciclo | $5,267.63 MXN/ciclo | El ritmo de ciclos se puede alargar o acortar; no es el diferenciador en sí. |
 | Licencias (FCM, SMTP) | **S** | $0 USD/mes | 1 mes | $0 | Infraestructura estándar de terceros, sin costo actual. |
+| Seguridad y cumplimiento de datos (cifrado + aviso de privacidad LFPDPPP) | **S** | $1,600 a $3,000 MXN (8-15h × $200 MXN/h) | 1 implementación única | $1,600-$3,000 MXN (costo único) | Obligación impuesta por la LFPDPPP y por la condición de Belvo como entidad regulada; es trabajo de implementarlo, no renta de un servicio. |
 
 ### Distribuir la oferta
 
@@ -196,9 +198,143 @@ Distinción adicional del curso entre costos de construir Vigilio y costos de ha
 
 **Lectura del resultado:** la fila nueva —web/PWA vs. tienda de apps nativa— es la pieza de información que más cambia la economía del proyecto si se ignora: adoptar distribución nativa multiplicaría por 3-5 veces el costo de cada cobro (de ~7% a 22-37% combinado), sin ninguna mejora de producto a cambio a esta escala. Mantenerse en web/PWA se documenta como decisión tomada, no como pendiente.
 
+## Paso 7 — Modelo económico completo (Bloques 4 y 5) 🟢
+
+El material del curso asume un producto de hardware + software (recuperación del costo del hardware en 12 meses, ejemplo resuelto de un sensor agrícola). Adapté "recuperación del costo del hardware" por "recuperación de la inversión en desarrollo" (ciclos de aprendizaje + seguridad y cumplimiento del Paso 4 y la sección de seguridad arriba), manteniendo intactas las fórmulas del curso.
+
+### Flujo de caja operativo — insumos
+
+**Costos variables por cuenta/mes:**
+
+| Componente | Costo |
+|---|---|
+| Clasificador de IA (Claude Haiku 5.5) | $0.13 MXN/cuenta/mes |
+| Canal de cobro (Stripe México) | $7.25 MXN/cuenta/mes |
+| **Total variable** | **$7.38 MXN/cuenta/mes** |
+
+**Costos fijos operativos mensuales:**
+
+| Componente | Costo |
+|---|---|
+| Bubble Starter | $1,037.00 MXN/mes |
+| Dominio propio, prorrateado | $18.75 MXN/mes |
+| **Total fijo mensual** | **$1,055.75 MXN/mes** |
+
+**Inversión inicial (se paga una sola vez):**
+
+| Componente | Costo |
+|---|---|
+| Personal — ciclos de aprendizaje (5 ciclos, escenario promedio) | $26,338.15 MXN |
+| Seguridad y cumplimiento de datos | $2,300.00 MXN |
+| **Total inversión inicial** | **$28,638.15 MXN** |
+
+### Margen de contribución y punto de equilibrio
+
+Margen de contribución = Precio − Costo variable = $99 − $7.38 = **$91.62 MXN/cuenta/mes**.
+
+**Punto de equilibrio (solo costos operativos):** $1,055.75 ÷ $91.62 = 11.52 → **12 cuentas pagando** — alcanzable dentro del piloto (RD-04: 20-30 cuentas).
+
+**Punto de equilibrio recuperando la inversión inicial en 12 meses:** cuota mensual de recuperación = $28,638.15 ÷ 12 = $2,386.51 MXN/mes. Costos fijos totales = $1,055.75 + $2,386.51 = $3,442.26 MXN/mes. Punto de equilibrio = $3,442.26 ÷ $91.62 = 37.58 → **38 cuentas pagando** — no alcanzable dentro del piloto, excede su propio techo de 30 cuentas. No es una señal de que el modelo esté roto: el piloto está diseñado para validar el producto, no para ser rentable todavía.
+
+### Precio de venta — dos métodos
+
+**Método 1 — Cost-plus, a dos escalas** (el ejercicio que pide el Bloque 5, "a volumen de 10" y "a volumen de 100"):
+
+| | A 10 cuentas | A 100 cuentas |
+|---|---|---|
+| Costo variable (IA + Stripe) | $7.38 MXN | $7.38 MXN |
+| Costo fijo compartido | $105.58 MXN | $10.56 MXN |
+| Recuperación de inversión compartida | $238.65 MXN | $23.87 MXN |
+| **Costo total mensual por cuenta** | **$351.61 MXN** | **$41.81 MXN** |
+| **Precio cost-plus (margen 40%)** | **$492.25 MXN/mes** | **$58.53 MXN/mes** |
+
+A 10 cuentas, el cost-plus pide casi 5 veces el precio ya validado ($99 MXN/mes); a 100 cuentas, cae muy por debajo. No es que el modelo no funcione — a la escala diminuta del piloto, los costos fijos y la inversión se reparten entre muy pocas cuentas. El negocio cierra con volumen, no con precio.
+
+**Método 2 — Value-based pricing.** Usando el caso real más fuerte de mi propia validación (`descripcion-negocio-vigilio.md`): una entrevistada acumuló $8,500 MXN en cargos "hormiga" sin detectarlos durante meses. Tomando esa cifra como ancla de pérdida evitada por año (un solo caso, no un promedio estadístico) y el mismo 10% de captura de valor del ejemplo del curso:
+
+Valor anual capturado = $8,500 × 10% = $850 MXN/año → Precio mensual equivalente (techo) = $850 ÷ 12 = **$70.83 MXN/mes**
+
+**Nota honesta:** este techo sale por debajo del precio ya validado ($99 MXN/mes) — lo opuesto de lo que pasa en el ejemplo del curso. No invalida el precio de $99: la cifra de $8,500 es un solo caso extremo, no un promedio confiable, así que este cálculo es más débil que la evidencia real de disposición a pagar (dos entrevistadas mencionaron $99 MXN de forma espontánea). Se incluye porque el curso lo pide, no porque deba reemplazar la evidencia primaria.
+
+**Precio recomendado: $99 MXN/mes**, el ya validado por entrevista — ni el cost-plus de piloto (pide demasiado por la escala pequeña) ni el value-based de un solo caso (pide muy poco por ser una muestra débil).
+
+### Flujo de caja proyectado a 12 meses
+
+Supuesto de adopción (estimación razonada, no dato cerrado): ningún cliente paga en los primeros 3 meses (tiempo de ajustar el clasificador con los ciclos de aprendizaje); a partir del mes 4 empiezan las conversiones reales, llegando a 25 cuentas (punto medio de 20-30) en el mes 12.
+
+| Mes | Cuentas pagando | Ingreso | Costo | Flujo neto del mes | Acumulado |
+|---|---|---|---|---|---|
+| 0 | — | — | $28,638.15 (inversión inicial) | — | −$28,638.15 |
+| 1 | 0 | $0.00 | $1,055.75 | −$1,055.75 | −$29,693.90 |
+| 2 | 0 | $0.00 | $1,055.75 | −$1,055.75 | −$30,749.65 |
+| 3 | 0 | $0.00 | $1,055.75 | −$1,055.75 | −$31,805.40 |
+| 4 | 2 | $198.00 | $1,070.51 | −$872.51 | −$32,677.91 |
+| 5 | 4 | $396.00 | $1,085.27 | −$689.27 | −$33,367.18 |
+| 6 | 7 | $693.00 | $1,107.41 | −$414.41 | −$33,781.59 |
+| 7 | 10 | $990.00 | $1,129.55 | −$139.55 | −$33,921.14 |
+| 8 | 14 | $1,386.00 | $1,159.07 | **+$226.93** | −$33,694.21 |
+| 9 | 18 | $1,782.00 | $1,188.59 | +$593.41 | −$33,100.80 |
+| 10 | 21 | $2,079.00 | $1,210.73 | +$868.27 | −$32,232.53 |
+| 11 | 23 | $2,277.00 | $1,225.49 | +$1,051.51 | −$31,181.02 |
+| 12 | 25 | $2,475.00 | $1,240.25 | +$1,234.75 | −$29,946.27 |
+
+El flujo mensual se vuelve positivo en el mes 8, pero la inversión inicial no se recupera dentro de los 12 meses del piloto — consistente con el punto de equilibrio de 38 cuentas calculado arriba.
+
+### VPN a 12 meses
+
+Tasa de descuento 15% anual, convertida a tasa mensual equivalente: (1.15)^(1/12) − 1 ≈ 1.1715% mensual.
+
+VPN = −$28,638.15 + Σ (flujo neto del mes t ÷ (1.011715)^t), para t = 1 a 12 → **VPN = −$30,218.08 MXN**
+
+El proyecto no crea valor todavía dentro del horizonte de 12 meses. Esto es esperado, no una alarma: un piloto académico topado deliberadamente en 20-30 cuentas no está diseñado para ser rentable en un año.
+
+### Resumen en el formato del curso
+
+```
+════════════════════════════════════════════════════════
+MODELO ECONÓMICO — Vigilio
+Modelo de ingresos: Freemium B2C ($99 MXN/mes, pagado por el hijo/a)
+════════════════════════════════════════════════════════
+
+COSTO UNITARIO: $351.61 MXN (10 cuentas) · $41.81 MXN (100 cuentas)
+Mayor componente: recuperación de inversión compartida (68%/57%)
+Costo de la IA: 0.3% a 2.1% del costo unitario (insignificante)
+
+PRECIO DE VENTA
+Cost-plus: $492.25 (10 cuentas) / $58.53 (100 cuentas) MXN/mes
+Value-based: hasta $70.83 MXN/mes (ancla de un solo caso, débil)
+Recomendado: $99 MXN/mes — ya validado por entrevista real
+
+PUNTO DE EQUILIBRIO
+Solo operativo: 12 cuentas — alcanzable dentro del piloto
+Recuperando inversión en 12 meses: 38 cuentas — no alcanzable
+
+FLUJO DE CAJA: positivo mensual desde el mes 8
+VPN A 12 MESES (15%): −$30,218.08 MXN
+
+PALANCAS: (1) escalar hacia el SOM real (304-608 hogares),
+(2) extender el horizonte de recuperación más allá de 12 meses,
+(3) no tocar el precio de $99 MXN/mes — ya validado
+════════════════════════════════════════════════════════
+```
+
+### Ejercicios genéricos de valor del dinero en el tiempo, VPN y TIR
+
+No específicos de Vigilio — del material del curso, resueltos paso a paso con las fórmulas ya dadas:
+
+1. **VF con capitalización trimestral:** $45,000 USD, 7.5% anual, 22 trimestres → **$67,717.39 USD**.
+2. **VP de una obligación futura:** $125,000 MXN en 48 meses, 12% anual mensual → **$77,532.55 MXN**.
+3. **Flujos mixtos irregulares** (años 1, 3, 5; tasa 9%) → **$25,956.52**.
+4. **VPN con anualidad constante:** inversión $250,000 USD, $60,000 USD/año × 6 años, tasa 11% → **+$3,832.27 USD**, viable con margen estrecho.
+5. **VPN con flujos variables:** inversión $50,000 USD, tasa 4% → **+$7,456.24 USD**, viable.
+6. **VPN con valor residual:** inversión $1,000,000 USD, con salvamento de $150K en el año 4, tasa 10% → **+$151,082.58 USD**, viable con margen amplio.
+7. **Comparación de proyectos X vs. Y:** mismo total nominal ($75,000), tasa 8% → **VPN X = $14,427.42 > VPN Y = $12,128.49** — X gana por repartir los flujos antes en el tiempo.
+8. **Análisis de sensibilidad** (Proyecto X, variando la tasa): viable a 8%, 15% y 20%; deja de serlo a 25% — su TIR real está entre 20% y 25% (≈24%).
+9. **TIR por interpolación lineal (verificación):** el material trae a Global Solutions resuelto con TIR interpolada ≈18.2%. Verifiqué con cálculo exacto de raíz (no interpolación): **TIR real ≈17.95%** — diferencia esperada por el método de aproximación, confirma que el 18.2% del material es razonable, no un error.
+
 ---
 
-## Estado de los entregables de la semana (Bloques 2 y 3) 🟢
+## Estado de los entregables de la semana (Bloques 2 a 5) 🟢
 
 | Entregable | Estado |
 |---|---|
@@ -208,8 +344,10 @@ Distinción adicional del curso entre costos de construir Vigilio y costos de ha
 | Costo de desarrollo por ciclos de aprendizaje | Hecho (Paso 4) |
 | Diferenciación de costos D/F/S | Hecho (Paso 5) |
 | Costos de crear vs. distribuir (D/F/S extendido) | Hecho (Paso 6) |
-| Bloque 4 — matemáticas financieras | Pendiente |
-| Bloque 5 — taller en clase | Pendiente |
+| Seguridad y cumplimiento (línea D/F/S agregada) | Hecho (Pasos 5 y 6) |
+| Bloque 4 — matemáticas financieras (punto de equilibrio, precio, flujo de caja, VPN) | Hecho (Paso 7) |
+| Bloque 5 — taller del modelo económico | Hecho (Paso 7) |
+| Plantilla oficial de costos del curso (Excel) | Hecho, llenada con datos reales de Vigilio |
 
 ## Referencias (APA-7)
 
@@ -233,8 +371,10 @@ Stripe. (2026). *Precios de Stripe en México*. https://stripe.com/mx/pricing
 
 Universe Page. (2026). *¿Cuánto cobrar por una página web en México en 2026? Precios reales y calculadora gratuita*. https://universepage.com.mx/blog/tarifa-desarrollador-web-freelance-mexico
 
+Vergara Páez, A. (2026). *Resultados de validación — entrevistas Semana 3* [Documento de proyecto, Vigilio]. Ibero Puebla.
+
 Wealth Management. (2026). *Preventing elder fraud: Nationwide partners with Carefull*. https://www.wealthmanagement.com/financial-technology/preventing-elder-fraud-nationwide-partners-with-carefull
 
 ## Nota final sobre cómo se trabajó esta semana
 
-El benchmarking de modelos de negocio se corrió en Perplexity, no en Claude, por instrucción del ejercicio de clase del viernes. Todo lo demás —BOM, costo de la IA, ciclos de aprendizaje, y ambas versiones de la diferenciación de costos— se trabajó con Claude, verificando cifras contra páginas oficiales de precios en vez de aceptar números genéricos. El hallazgo del Paso 6 (web/PWA vs. tiendas de apps) no estaba pedido explícitamente por la rúbrica; se agregó porque surgió de forma natural al adaptar la tabla de "distribuir la oferta" y cambia la economía del proyecto lo suficiente como para no dejarlo fuera.
+El benchmarking de modelos de negocio se corrió en Perplexity, no en Claude, por instrucción del ejercicio de clase del viernes. Todo lo demás —BOM, costo de la IA, ciclos de aprendizaje, ambas versiones de la diferenciación de costos, la línea de seguridad y cumplimiento, y el modelo económico completo de los Bloques 4 y 5— se trabajó con Claude, verificando cifras contra páginas oficiales de precios en vez de aceptar números genéricos. El hallazgo del Paso 6 (web/PWA vs. tiendas de apps) no estaba pedido explícitamente por la rúbrica; se agregó porque surgió de forma natural al adaptar la tabla de "distribuir la oferta" y cambia la economía del proyecto lo suficiente como para no dejarlo fuera. Tampoco estaba en la rúbrica desglosar las horas por actividad dentro de un ciclo de aprendizaje, ni la línea de seguridad y cumplimiento de datos — ambas surgieron de revisar con cuidado huecos que ya existían desde semanas anteriores (Semana 5, PDS) y que no tenían número asignado todavía. La plantilla oficial de costos del curso se llenó aparte en Excel, con las mismas cifras ya validadas aquí.
