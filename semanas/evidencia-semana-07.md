@@ -332,6 +332,42 @@ No específicos de Vigilio — del material del curso, resueltos paso a paso con
 8. **Análisis de sensibilidad** (Proyecto X, variando la tasa): viable a 8%, 15% y 20%; deja de serlo a 25% — su TIR real está entre 20% y 25% (≈24%).
 9. **TIR por interpolación lineal (verificación):** el material trae a Global Solutions resuelto con TIR interpolada ≈18.2%. Verifiqué con cálculo exacto de raíz (no interpolación): **TIR real ≈17.95%** — diferencia esperada por el método de aproximación, confirma que el 18.2% del material es razonable, no un error.
 
+## Paso 8 — Adenda: flujo a 5 años y sensibilidad de tasa de descuento (agregada 6-nov-2026) 🟢
+
+**Por qué:** la segunda evaluación de mi profesor (25-oct-2026) marcó "faltó toda la parte de viabilidad financiera". El análisis ya publicado (punto de equilibrio, precio, flujo de caja y VPN) cubría correctamente solo el horizonte de 12 meses — una viabilidad financiera real normalmente pide un horizonte más largo. Esta adenda lo cierra, sin tocar los Pasos 1-7 ya documentados arriba.
+
+**Corrección de un supuesto propio, antes de los números finales:** mi primera versión de este ejercicio proyectaba el flujo a 5 años asumiendo 20% de crecimiento anual en cuentas pagando hasta llegar a 456 en el año 5 — cifra tomada del SOM (304-608 hogares, `canvas-mercado-semana4.md`), no de la capacidad real del piloto (20-30 cuentas, RD-04). Mezclaba validación de mercado con capacidad de piloto, sin sustento. Lo corregí: de Año 2 a Año 5 congelé las cuentas en la misma meseta de 25 que usa el resto del modelo (`Supuestos!B17` del Excel) — el negocio nunca crece más allá del techo de su propio piloto. Es el piso más conservador que puedo defender, no una predicción.
+
+### Flujo a 5 años (granularidad mensual/trimestral/anual pedida por el taller)
+
+Meses 1-12 con la misma rampa de adopción ya validada del piloto (`resultado-validacion-semana3.md`); Año 2 en trimestres; Años 3-5 anuales, meseta de 25 cuentas constante:
+
+| Periodo | Cuentas al cierre | Ingreso | Flujo neto | Acumulado | VP acumulado |
+|---|---|---|---|---|---|
+| Mes 12 (cierre Año 1) | 25 | $2,475.00 | $1,234.58 | −$29,947.14 | −$30,218.86 |
+| Trimestre 4 (Año 2) | 25 | $7,425.00 | $3,703.73 | −$15,132.24 | −$18,404.88 |
+| Año 3 | 25 | $29,700.00 | $14,814.90 | −$317.34 | −$8,663.84 |
+| Año 4 | 25 | $29,700.00 | $14,814.90 | $14,497.56 | −$193.38 |
+| Año 5 | 25 | $29,700.00 | $14,814.90 | $29,312.46 | **$7,172.25** |
+
+Ingreso total acumulado a 5 años: $131,076 MXN. VPN a 5 años (tasa 15% anual): $7,172.25 MXN — cruza a positivo entre el Año 3 y el Año 4 (acumulado sin descontar) y lo confirma el valor presente en el Año 5. A diferencia del horizonte de 12 meses (VPN −$30,218.08 MXN, Paso 7), aquí sí se recupera la inversión — consistente con la palanca ya identificada de que recuperarla toma más de un año, no que no se recupere.
+
+### Sensibilidad de tasa de descuento: 15% contra 25%
+
+El 15% usado en todo el modelo viene del propio material del curso, sin cita externa independiente. Corrí el mismo flujo con 25% (referencia típica de capital de riesgo en etapa semilla), sin tocar la tasa global del resto del modelo:
+
+| Horizonte | VPN @15% | VPN @25% | Diferencia | ¿Cambia el signo? |
+|---|---|---|---|---|
+| 12 meses (meseta de 25) | −$30,218.86 | −$30,358.81 | −$139.95 | No — sigue negativo en ambas |
+| **5 años (meseta de 25)** | **+$7,172.25** | **−$1,521.71** | **−$8,693.96** | **Sí** |
+| 12 meses, escenario de 40 cuentas | +$408.10 | −$839.83 | −$1,247.93 | Sí |
+
+Hallazgo central: a 5 años, en el escenario conservador, cambiar la tasa de descuento de 15% a 25% invierte la conclusión de "sí crea valor" a "no crea valor". No es error de cálculo en ninguna tasa — el efecto de la tasa de descuento crece con el tiempo: por eso a 12 meses el VPN casi no se mueve ($140 MXN) pero a 5 años se mueve casi $8,700 MXN, lo suficiente para cruzar el signo.
+
+**Conclusión:** la viabilidad financiera de Vigilio, en el escenario más conservador, no es un "sí" robusto — es un "depende de qué tasa de descuento se use". No cambia el precio ya validado ($99 MXN/mes) ni las palancas ya identificadas (escalar hacia el SOM, extender el horizonte) — las refuerza: en los escenarios de 40 y 55 cuentas de la misma hoja de sensibilidad, el de 55 cuentas se mantiene positivo con ambas tasas, es decir, escalar es justo lo que saca al proyecto de esta zona de incertidumbre.
+
+**Fuente:** `Modelo_Financiero_Vigilio.xlsx`, hojas "Flujo 5 anos" y "Sensibilidad 15 vs 25".
+
 ---
 
 ## Estado de los entregables de la semana (Bloques 2 a 5) 🟢

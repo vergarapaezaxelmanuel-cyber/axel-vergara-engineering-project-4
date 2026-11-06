@@ -135,6 +135,38 @@ También resolví los 9 ejercicios genéricos de valor del dinero en el tiempo, 
 
 Esta semana el patrón de "verificar antes de confiar" se repitió, pero esta vez no fue sobre mi propio trabajo (como el boceto técnico de Semana 6), sino sobre la herramienta que usé en clase: Perplexity se equivocó en precios concretos y en una afirmación de fondo (Carefull sí tiene modelo B2B), y si no hubiera verificado contra las fuentes oficiales habría llevado a clase un argumento que un competidor real ya contradice. También me quedó más claro que en un producto bancario, el costo de que el producto "no se use" no es un problema de retención cualquiera — es un fraude real sin detectar, y eso cambia qué modelo de ingresos conviene preferir. Pero el hallazgo más importante de toda la semana fue el del modelo económico: no fue ningún número individual, sino entender dónde está realmente el riesgo. No es el costo de la IA (insignificante), es el tamaño del piloto diluyendo una inversión fija entre muy pocos usuarios — y estuve a punto de inflar ese problema agregando un costo de "construcción inicial" que, al revisarlo con cuidado, ya estaba contado dentro del primer ciclo de aprendizaje.
 
+## Adenda (6-nov-2026): flujo a 5 años y sensibilidad de tasa de descuento
+
+**Por qué agrego esto ahora:** en la segunda evaluación de mi profesor (25 de octubre) me marcó que faltaba toda la parte de viabilidad financiera. Lo que ya tenía publicado —punto de equilibrio, precio, flujo de caja y VPN a 12 meses— seguía estando completo y correcto, pero cubría solo el primer año. Una viabilidad financiera real normalmente pide un horizonte más largo, y ese sí era un hueco genuino. Esta adenda lo cierra, sin tocar nada de lo que ya estaba arriba.
+
+**El ajuste que hice antes de los números.** Mi primera versión de este ejercicio proyectaba el flujo a 5 años asumiendo que las cuentas pagando crecían 20% anual hasta llegar a 456 en el año 5 —una cifra tomada del SOM, no de mi piloto real. No estaba sustentado: nada en el proyecto dice que el piloto va a crecer así, y mezclaba la validación de mercado (304-608 hogares de SOM) con la capacidad real del piloto (20-30 cuentas, RD-04). Lo corregí de raíz: de Año 2 a Año 5, congelé el número de cuentas en la misma meseta de 25 que ya usa el resto del modelo —el negocio nunca crece más allá del techo de su propio piloto. Es el escenario más conservador que puedo defender, un piso, no una predicción: si la meta real es crecer hacia el SOM, esta tabla subestima los ingresos a propósito.
+
+**Flujo a 5 años** (meses 1-12 con la misma rampa de adopción ya validada; Año 2 en trimestres, Años 3-5 anuales, meseta de 25 cuentas constante):
+
+| Periodo | Cuentas al cierre | Ingreso | Flujo neto | Acumulado | VP acumulado |
+|---|---|---|---|---|---|
+| Mes 12 (cierre Año 1) | 25 | $2,475.00 | $1,234.58 | −$29,947.14 | −$30,218.86 |
+| Trimestre 4 (Año 2) | 25 | $7,425.00 | $3,703.73 | −$15,132.24 | −$18,404.88 |
+| Año 3 | 25 | $29,700.00 | $14,814.90 | −$317.34 | −$8,663.84 |
+| Año 4 | 25 | $29,700.00 | $14,814.90 | $14,497.56 | −$193.38 |
+| Año 5 | 25 | $29,700.00 | $14,814.90 | $29,312.46 | **$7,172.25** |
+
+Ingreso total acumulado a 5 años: $131,076 MXN. VPN a 5 años (tasa 15% anual): **$7,172.25 MXN**. A diferencia del horizonte de 12 meses (VPN de −$30,218.08 MXN, ya publicado arriba), a 5 años sí cruzo a VPN positivo — justo lo que la sección de palancas del análisis de 12 meses ya anticipaba: recuperar la inversión toma más de un año, no que no se vaya a recuperar.
+
+**Sensibilidad de tasa de descuento: 15% contra 25%.** El 15% que usé en todo el modelo viene del propio material del curso, sin una cita externa independiente que lo respalde. Para probar qué tan sólida es mi conclusión, corrí el mismo flujo con 25% —una referencia más típica de capital de riesgo en etapa semilla—, sin tocar la tasa del resto del modelo:
+
+| Horizonte | VPN @15% | VPN @25% | Diferencia | ¿Cambia el signo? |
+|---|---|---|---|---|
+| 12 meses (meseta de 25) | −$30,218.86 | −$30,358.81 | −$139.95 | No — sigue negativo en ambas |
+| **5 años (meseta de 25)** | **+$7,172.25** | **−$1,521.71** | **−$8,693.96** | **Sí** |
+| 12 meses, escenario de 40 cuentas | +$408.10 | −$839.83 | −$1,247.93 | Sí |
+
+El hallazgo central de esta adenda es el segundo renglón: a 5 años, en el mismo escenario conservador, si evalúo el proyecto con una tasa de capital de riesgo (25%) en vez de la tasa de referencia del curso (15%), mi conclusión se invierte —de "sí crea valor" a "no crea valor". No es un error de cálculo en ninguna de las dos tasas: el efecto de la tasa de descuento crece mientras más lejano está el dinero en el tiempo, por eso el VPN a 12 meses casi no se mueve ($140 MXN) pero el de 5 años se mueve casi $8,700 MXN —suficiente para cruzar de positivo a negativo.
+
+**Lo que me llevo de esta adenda.** La viabilidad financiera de Vigilio, en el escenario más conservador que puedo defender, no es un "sí" robusto — es un "depende de qué tasa de descuento uses". Eso es distinto de decir que el proyecto es inviable, y también distinto de presentarlo como ya validado sin matices: el caso financiero a 5 años es positivo bajo el costo de capital del curso, y se vuelve negativo bajo un costo de capital de riesgo igual de realista. Esto no cambia el precio ya validado ($99 MXN/mes) ni las palancas que ya había identificado en el análisis de 12 meses —las refuerza: escalar hacia el SOM es justo lo que saca al proyecto de esta zona de incertidumbre, porque a mayor volumen el efecto de la tasa de descuento deja de decidir el signo del VPN (en los escenarios de 40 y 55 cuentas de la misma hoja de sensibilidad, el de 55 cuentas se mantiene positivo en ambas tasas).
+
+El archivo de Excel actualizado (`Modelo_Financiero_Vigilio.xlsx`, hojas "Flujo 5 anos" y "Sensibilidad 15 vs 25") es la fuente de todos los números de esta adenda.
+
 ## Referencias (APA-7)
 
 Anthropic. (2026). *Pricing*. Claude Developer Platform. https://platform.claude.com/docs/en/about-claude/pricing
