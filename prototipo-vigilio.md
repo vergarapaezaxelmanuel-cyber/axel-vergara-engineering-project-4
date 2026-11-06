@@ -12,10 +12,13 @@ Este prototipo es parte de la **Semana 8 — Prototipado y diseño para manufact
 
 ## Así funciona
 
-<!-- Reemplaza YOUR_VIDEO_ID por el ID de tu video de YouTube una vez que lo subas como "no listado" -->
-<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:720px;margin:1.5rem 0;">
-  <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Vigilio detectando un cargo sospechoso" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+*El siguiente video muestra, de forma simulada, cómo Vigilio compararía una transacción nueva contra el historial normal de gastos de una cuenta — no hay ninguna cuenta bancaria real conectada todavía; eso llega en la siguiente fase del proyecto.*
+
+<div style="position:relative;padding-bottom:177.78%;height:0;overflow:hidden;max-width:360px;margin:1.5rem auto;">
+  <iframe src="https://www.youtube.com/embed/Iqx4OyEjZKc" title="Vigilio detectando un cargo sospechoso" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
 </div>
+
+*Nota: este demo muestra el motor de clasificación en una conversación de prueba. En producción, esta evaluación corre automáticamente cada vez que aparece una transacción nueva — el usuario no tiene que hacer nada.*
 
 ## Precio de lanzamiento
 
