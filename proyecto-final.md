@@ -24,6 +24,6 @@ Seg煤n la Secci贸n VI del syllabus, esto es lo que se eval煤a y con qu茅 peso 鈥
 
 - Producto f铆sico (video/fotos): _(pendiente)_
 - Aplicaci贸n / repositorio de la app: _(pendiente)_
-- Landing page de lanzamiento: _(pendiente)_
+- Landing page de lanzamiento: [Reserva tu lugar](./prototipo-vigilio.html) (prototipo de negocio, Semana 8)
 - Documentaci贸n t茅cnica y BOM: _(pendiente)_
 - Guion / grabaci贸n del pitch: _(pendiente)_

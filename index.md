@@ -13,6 +13,7 @@ Esta es mi página individual para el curso **Proyecto de Ingeniería IV** (Oto�
 - [About me](./about.html) — quién soy, mi historia y hacia dónde voy.
 - [Semanas](./semanas/) — el registro semanal de avance, semana 1 a 16.
 - [Proyecto Final](./proyecto-final.html) — la entrega integrada al final del curso.
+- [Reserva tu lugar](./prototipo-vigilio.html) — prototipo de negocio de Vigilio (Semana 8), con precio real y pre-reserva.
 - [Syllabus del curso](assets/docs/syllabus.pdf) — programa oficial de la materia (PDF).
 
 Soy Axel Vergara Páez, estudiante de Ingeniería en Negocios en la Ibero Puebla. Este semestre estoy construyendo **Vigilio**, una app que avisa a los hijos cuando aparece un cargo sospechoso en la cuenta bancaria de un padre o madre mayor, antes de que sea demasiado tarde para actuar. La idea nació de algo que le pasó a mi mamá, y en este sitio voy documentando cada semana el proceso completo: desde la validación de la oportunidad hasta el producto físico y la app conectada.
