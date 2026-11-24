@@ -1,0 +1,131 @@
+<style>
+/* ===== Mejora visual Vigilio — paleta de confianza/seguridad bancaria ===== */
+:root {
+  --vg-primary: #1E3A8A;       /* azul marino — confianza bancaria */
+  --vg-primary-dark: #172554;
+  --vg-accent: #0EA5A4;        /* teal — vigilancia */
+  --vg-accent-light: #CCFBF1;
+  --vg-warn: #F59E0B;          /* ámbar — HIPÓTESIS/supuesto */
+  --vg-warn-light: #FEF3C7;
+  --vg-pending: #475569;       /* gris-azulado — PENDIENTE/por hacer */
+  --vg-pending-light: #E2E8F0;
+  --vg-ok: #16A34A;            /* verde — VERIFICADO */
+  --vg-ok-light: #DCFCE7;
+  --vg-radius: 10px;
+}
+
+/* Etiquetas de estado — pégalas en tu markdown así:
+   <span class="vg-badge vg-badge--ok">✅ VERIFICADO</span>
+   <span class="vg-badge vg-badge--warn">HIPÓTESIS</span>
+   <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> */
+.vg-badge {
+  display: inline-block;
+  padding: 0.15em 0.65em;
+  border-radius: 999px;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+.vg-badge--ok { background: var(--vg-ok-light); color: var(--vg-ok); border: 1px solid var(--vg-ok); }
+.vg-badge--warn { background: var(--vg-warn-light); color: var(--vg-warn); border: 1px solid var(--vg-warn); }
+.vg-badge--pending { background: var(--vg-pending-light); color: var(--vg-pending); border: 1px solid var(--vg-pending); }
+
+html { scroll-behavior: smooth; }
+
+/* Encabezados con acento */
+.main-content h2 {
+  border-bottom: 3px solid var(--vg-accent);
+  padding-bottom: 0.3em;
+}
+/* "Hero" suave detrás del título principal de cada página — sin tocar tu HTML */
+.main-content h1:first-of-type {
+  color: var(--vg-primary-dark);
+  background: linear-gradient(135deg, var(--vg-accent-light) 0%, #ffffff 100%);
+  border-radius: 14px;
+  padding: 0.7em 1em;
+  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.14);
+}
+
+/* Enlaces con transición suave */
+.main-content a {
+  color: var(--vg-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.main-content a:hover {
+  color: var(--vg-accent);
+  border-bottom-color: var(--vg-accent);
+}
+
+/* Nav lateral: hover con barra de acento + transición */
+.nav-list .nav-list-link {
+  border-radius: 6px;
+  transition: background-color 0.18s ease, padding-left 0.18s ease;
+}
+.nav-list .nav-list-link:hover {
+  background-color: rgba(30, 58, 138, 0.08);
+  padding-left: 1.1rem;
+  border-left: 3px solid var(--vg-accent);
+}
+.nav-list .nav-list-item .nav-list-link.active {
+  border-left: 3px solid var(--vg-primary);
+  background-color: rgba(30, 58, 138, 0.06);
+}
+
+/* Tablas: bordes redondeados, sombra suave, hover de fila */
+.main-content table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--vg-radius);
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.main-content table thead th {
+  background-color: var(--vg-primary-dark);
+  color: #fff;
+}
+.main-content table tbody tr:nth-child(even) { background-color: rgba(14, 165, 164, 0.05); }
+.main-content table tbody tr:hover { background-color: rgba(30, 58, 138, 0.07); transition: background-color 0.15s ease; }
+
+/* Bloques de código: estilo "tarjeta" cian, como el de referencia */
+.main-content pre.highlight {
+  border-radius: 15px;
+  border: 2px solid var(--vg-primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.main-content code {
+  background-color: var(--vg-accent-light);
+  color: #03045e;
+  border-radius: 6px;
+  padding: 0.1em 0.4em;
+}
+
+/* Blockquotes como "callout" de color — útil para notas de evidencia/hallazgos */
+.main-content blockquote {
+  border-left: 4px solid var(--vg-accent);
+  background-color: rgba(14, 165, 164, 0.06);
+  border-radius: 0 8px 8px 0;
+  padding: 0.7em 1em;
+}
+
+/* Botones (.btn de just-the-docs) con efecto hover "lift" */
+.btn {
+  border-radius: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Entrada suave del contenido al cargar la página */
+.main-content {
+  animation: vg-fade-in 0.35s ease-in;
+}
+@keyframes vg-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
