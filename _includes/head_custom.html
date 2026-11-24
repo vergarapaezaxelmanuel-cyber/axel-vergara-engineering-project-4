@@ -3,8 +3,8 @@
 :root {
   --vg-primary: #1E3A8A;       /* azul marino — confianza bancaria */
   --vg-primary-dark: #172554;
-  --vg-accent: #0EA5A4;        /* teal — vigilancia */
-  --vg-accent-light: #CCFBF1;
+  --vg-accent: #4F46E5;        /* índigo — vigilancia (antes teal, cambiado para no parecerse al cian de otra página) */
+  --vg-accent-light: #E0E7FF;
   --vg-warn: #F59E0B;          /* ámbar — HIPÓTESIS/supuesto */
   --vg-warn-light: #FEF3C7;
   --vg-pending: #475569;       /* gris-azulado — PENDIENTE/por hacer */
@@ -94,7 +94,7 @@ html { scroll-behavior: smooth; }
   background-color: var(--vg-primary-dark);
   color: #fff;
 }
-.main-content table tbody tr:nth-child(even) { background-color: rgba(14, 165, 164, 0.05); }
+.main-content table tbody tr:nth-child(even) { background-color: rgba(79, 70, 229, 0.05); }
 .main-content table tbody tr:hover { background-color: rgba(30, 58, 138, 0.07); transition: background-color 0.15s ease; }
 
 /* Bloques de código: estilo "tarjeta" cian, como el de referencia */
@@ -113,7 +113,7 @@ html { scroll-behavior: smooth; }
 /* Blockquotes como "callout" de color — útil para notas de evidencia/hallazgos */
 .main-content blockquote {
   border-left: 4px solid var(--vg-accent);
-  background-color: rgba(14, 165, 164, 0.06);
+  background-color: rgba(79, 70, 229, 0.06);
   border-radius: 0 8px 8px 0;
   padding: 0.7em 1em;
 }
