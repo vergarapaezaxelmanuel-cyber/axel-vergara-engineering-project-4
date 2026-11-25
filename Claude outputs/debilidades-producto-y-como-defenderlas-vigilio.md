@@ -1,4 +1,6 @@
 ---
+nav_exclude: true
+search_exclude: true
 title: "Temas débiles de Vigilio y cómo defenderlos en la presentación (documento interno, NO para la página)"
 fecha: "25-nov-2026"
 ---

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Proyecto final — Vigilio (página de memoria)
+title: Proyecto final — Vigilio
 nav_order: 100
 ---
 

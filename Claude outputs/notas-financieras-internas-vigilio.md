@@ -1,4 +1,6 @@
 ---
+nav_exclude: true
+search_exclude: true
 title: "Parte financiera — cómo se calculó todo (documento interno, NO para la página de GitHub)"
 fecha: "25-nov-2026"
 ---
