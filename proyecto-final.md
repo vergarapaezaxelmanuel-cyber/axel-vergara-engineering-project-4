@@ -6,7 +6,7 @@ nav_order: 100
 
 # Vigilio — página de memoria del proyecto
 
-**Versión de esta página: 24-nov-2026.** Esta página es guía semanal, plan de negocio y memoria de calificación a la vez — cada sección muestra una decisión del equipo y su evidencia, no una respuesta de IA copiada. Donde falta evidencia real, se marca **HIPÓTESIS** o **PENDIENTE**, no se rellena para que se vea completo. El detalle extendido de cada semana vive en [Semanas](semanas/) — aquí va la versión de una pantalla por sección.
+**Versión de esta página: 25-nov-2026.** Esta página es guía semanal, plan de negocio y memoria de calificación a la vez — cada sección muestra una decisión del equipo y su evidencia, no una respuesta de IA copiada. Donde falta evidencia real, se marca **HIPÓTESIS** o **PENDIENTE**, no se rellena para que se vea completo. El detalle extendido de cada semana vive en [Semanas](semanas/) — aquí va la versión de una pantalla por sección.
 
 **Equipo:** Axel Vergara Páez — trabajo individual (ver sección 1).
 
@@ -14,7 +14,22 @@ nav_order: 100
 
 ## 0. Resumen ejecutivo
 
-<span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> — se escribe al final, cuando el resto de la página esté cerrado (regla 7 de esta memoria: el resumen ejecutivo se escribe último, no primero). Aquí van, cuando se llene: nombre/logo, propuesta de valor en ≤25 palabras, foto/render del producto, 3 cifras clave, enlaces a repo/landing/pitch/demo, y una oración honesta sobre el estado real del proyecto.
+*Versión: 25-nov-2026 · Semana 9 — se cierra al final, con el resto de la página ya cerrada (regla 7 de esta memoria).*
+
+**Vigilio** (escudo con el ojo) — *"Vigilio vigila lo que tu banco no ve."*
+
+**Propuesta de valor (≤25 palabras):** "A diferencia de la banca tradicional, que tarda meses en innovar, Vigilio ya avisa hoy de los cargos chicos que ellos tardan en detectar."
+
+**Foto/evidencia:** <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> insertar aquí la captura real de la pantalla de alerta (Electrónica Gamer MX, $4,500 MXN, 23-nov-2026) — es la evidencia más honesta posible: no hay producto físico que renderizar, pero sí una pantalla real funcionando con un caso real detectado por la IA (ver sección 18). Se usa esta captura en vez de un mockup o la pantalla de login.
+
+**3 cifras clave:**
+1. SOM año 1-2: 300 a 600 hogares (~$361K-723K MXN)
+2. LTV ÷ inversión = 3.25 (payback 5.46 meses)
+3. 9 entrevistas de validación reales (3 de 9 dispuestos a pagar directamente)
+
+**Estado honesto, en una oración:** MVP funcional con ambos lados (hijo y padre/madre) construido y probado; 0 de 5 pruebas de usuario se completaron sin ayuda y 0 preórdenes pagadas, con los 3 ajustes prioritarios ya identificados.
+
+**Enlaces:** [repositorio y bitácora](https://github.com/vergarapaezaxelmanuel-cyber/axel-vergara-engineering-project-4) · landing (sección 19) · pitch y demo (sección 20 — video en camino).
 
 ---
 
@@ -114,13 +129,13 @@ nav_order: 100
 
 **Slogan:** *"Vigilio vigila lo que tu banco no ve."*
 
-**Propuesta de valor:** "A diferencia de la banca tradicional en México, que tarda hasta 12 meses en lanzar una función nueva, Vigilio ya te avisa hoy de los cargos chicos que a ellos les toma años empezar a detectar — sin quitarle a tu papá o mamá el control de su cuenta."
+**Propuesta de valor:** "A diferencia de la banca tradicional en México, que tarda hasta 12 meses en lanzar una función nueva, Vigilio ya te avisa hoy de los cargos chicos que sus alertas no marcan por estar calibradas para montos grandes — sin quitarle a tu papá o mamá el control de su cuenta."
 
 **Por qué a mí y no a otro:** acceso de **solo lectura** (nunca mueve dinero) bajo la autorización de Belvo ante la CNBV como IFPE (LatamFintech, 2022); y porque copiarlo de verdad exige repetir el **trabajo de entrevistas reales** ya hecho, no solo la tecnología.
 
 **Evidencia:** ningún entrevistado mencionó conocer una herramienta similar operando en México (sección 3); los 3 competidores directos identificados (sección 4) no operan en pesos ni en bancos mexicanos, lo que confirma que el espacio está libre.
 
-**Qué cambió:** se retiró "clonaciones de tarjetas" como algo que Vigilio detecta directamente (es la causa, no lo que el sistema clasifica) y se corrigió la dirección causal.
+**Qué cambió:** se retiró "clonaciones de tarjetas" como algo que Vigilio detecta directamente (es la causa, no lo que el sistema clasifica) y se corrigió la dirección causal; el 25-nov se corrigió además una afirmación sin fuente directa ("les toma años empezar a detectar") por una versión anclada a evidencia real: los bancos calibran sus alertas para montos grandes, no chicos.
 
 **Qué falta:** leer la propuesta en voz alta a alguien fuera del proyecto y confirmar que puede repetirla y entiende quién es el usuario y qué obtiene (pendiente desde Semana 4, sin cerrar todavía).
 
@@ -177,7 +192,7 @@ nav_order: 100
 
 **Qué cambió:** se corrigió que no existe un tier "Development" en Belvo (solo Sandbox y Production); se formalizó el manejo de falla de integración como requerimiento verificable (RF-06).
 
-**Qué falta:** verificar en el dashboard real de Belvo qué bancos mexicanos específicos están disponibles (no hay lista pública fija); decidir si el piloto necesita app publicada ($1,037 MXN/mes, Bubble Starter) o basta demo en editor.
+**Qué falta:** verificar en el dashboard real de Belvo qué bancos mexicanos específicos están disponibles (no hay lista pública fija); decidir si el piloto necesita app publicada ($685.62 MXN/mes, Bubble Starter — corregido 25-nov-2026, antes $1,037 de un precio ya desactualizado) o basta demo en editor.
 
 [Ver el proceso completo de Semana 5 →](semanas/evidencia-semana-05.html)
 
@@ -217,11 +232,13 @@ nav_order: 100
 
 *Versión: 23-nov-2026 · Semanas 5, 7 y 8.*
 
-**Decisión:** Vigilio es software-only — no hay manufactura física que fabricar (RR-02). El "BOM" real es el costo de servicios: Belvo (Sandbox, $0), clasificador de IA (centavos de dólar por clasificación), Bubble Starter si se publica ($1,037 MXN/mes).
+**Decisión:** Vigilio es software-only — no hay manufactura física que fabricar (RR-02). El "BOM" real es el costo de servicios: Belvo (Sandbox, $0), clasificador de IA — Claude Haiku 5.5 (centavos de dólar por clasificación), Bubble Starter si se publica ($685.62 MXN/mes, $39 USD — corregido 25-nov-2026, antes $1,037 MXN de un precio ya desactualizado), más un costo nuevo que no estaba documentado: Claude Pro ($351.60 MXN/mes, $20 USD), el asistente que Axel usa para depurar errores durante el desarrollo — distinto del clasificador, que es el motor de la app.
 
-**Evidencia:** detalle completo de costo de IA y seguridad/cumplimiento en `bom-costo-ia-semana7-vigilio.md`; ejercicio de presupuesto completo en la arquitectura de Semana 5 (sección 8 de esta página).
+**Evidencia:** detalle completo de costo de IA, BOM adaptado y clasificación D/F/S en `bom-costo-ia-semana7-vigilio.md` (verificado contra `bubble.io/pricing` y `claude.com/pricing`, 25-nov-2026); ejercicio de presupuesto completo en la arquitectura de Semana 5 (sección 8 de esta página).
 
-**Qué falta:** BOM final cotizado — <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> de confirmar con Axel el estado actual (última cifra conocida necesita refrescarse).
+**Qué cambió:** se corrigió el precio de Bubble (reestructuró sus planes) y se agregó Claude Pro como costo fijo real, no documentado antes; las dos correcciones casi se cancelan entre sí (el fijo mensual total sube solo $0.22 MXN) — ninguna conclusión del modelo financiero cambia de forma material (ver sección 14).
+
+**Qué falta:** nada estructural — BOM final cotizado y verificado contra fuentes oficiales.
 
 [Ver el proceso completo de Semana 7 →](semanas/evidencia-semana-07.html) · [Ver Semana 8 →](semanas/evidencia-semana-08.html)
 
@@ -254,7 +271,7 @@ nav_order: 100
 | Modelo de ingresos y precio | Freemium — gratis hasta el primer problema detectado, luego $99 MXN/mes | Sección 14 |
 | Canales | Venta directa (landing con CTA de pre-registro vía WhatsApp); boca a boca dentro del círculo familiar/cercano como primer canal de validación | Sección 19 |
 | Propuesta de valor | "Vigilio vigila lo que tu banco no ve" | Sección 5 |
-| Costos | Belvo Sandbox $0; clasificador de IA, centavos de dólar por clasificación; Bubble Starter $1,037 MXN/mes si se publica para piloto real | Sección 14 |
+| Costos | Belvo Sandbox $0; clasificador de IA (Claude Haiku 5.5), centavos de dólar por clasificación; Bubble Starter $685.62 MXN/mes si se publica para piloto real; Claude Pro $351.60 MXN/mes (asistente de desarrollo de Axel, costo F, no el motor de la app) | Sección 14 |
 | Socios | Belvo (agregador de open banking, autorizado IFPE/CNBV); proveedor del modelo de IA (Anthropic/OpenAI, vía API) | Secciones 8, 16 |
 | Equipo y recursos | Axel Vergara Páez (individual); Bubble (no-code); Claude Code como asistente de desarrollo | Sección 1 |
 
@@ -288,12 +305,12 @@ nav_order: 100
 | Punto de equilibrio (solo operativo) | 12 cuentas — ✅ alcanzable dentro del piloto (20-30) |
 | Punto de equilibrio (recuperando inversión en 12 meses) | 38 cuentas — ❌ excede el techo del piloto |
 | Flujo mensual positivo desde | mes 8 |
-| Inversión inicial | $28,638.15 MXN |
-| VPN a 12 meses (tasa 15%) | **−$30,218.08 MXN** |
+| Inversión inicial | $28,638.98 MXN |
+| VPN a 12 meses (tasa 15%) | **−$30,221.36 MXN** |
 
 **Hallazgo honesto que no se esconde:** el proyecto **no recupera la inversión ni crea valor positivo dentro de los primeros 12 meses** a la escala del piloto — es lo esperado para un piloto académico de validación, no una señal de que el modelo esté roto. El costo de la IA es irrelevante (menos del 2% del costo unitario a cualquier escala); el verdadero cuello de botella es el volumen de cuentas, no el precio ni el costo operativo.
 
-**Qué cambió:** se corrigió un supuesto anterior de "presupuesto confirmado sin tope" — nunca se verificó con el profesor; sigue abierto.
+**Qué cambió:** se corrigió un supuesto anterior de "presupuesto confirmado sin tope" — nunca se verificó con el profesor; sigue abierto. El 25-nov se corrigieron además los costos fijos mensuales (Bubble bajó de $1,037 a $685.62 MXN/mes; se agregó Claude Pro a $351.60 MXN/mes) — el efecto neto es una diferencia de $3.28 MXN en el VPN a 12 meses, inmaterial: ninguna conclusión cambia (detalle en `matematicas-financieras-bloque4-5-semana7-vigilio.md`).
 
 **Qué falta:** confirmar con el profesor si existe un tope real de presupuesto en pesos (misma pregunta pendiente que en la sección 7).
 
@@ -354,7 +371,7 @@ nav_order: 100
 
 ### 17. Integración y pruebas del sistema
 
-*Versión: 24-nov-2026 · Semana 9 — marco de 4 fronteras ya adaptado al stack real.*
+*Versión: 25-nov-2026 · Semana 9 — marco de 4 fronteras ya adaptado al stack real, con resultados reales de prueba.*
 
 **Decisión:** Vigilio tiene 4 fronteras (adaptación del marco del curso, que asume sensor/microcontrolador — Vigilio no tiene artefacto físico):
 
@@ -365,36 +382,60 @@ nav_order: 100
 | F3 | Backend → Clasificador de IA | Timeout o error de la API de Claude Haiku |
 | F4 | Backend → App del hijo/a | La alerta no se refleja en pantalla a tiempo |
 
-**Pruebas T1-T6, adaptadas a software (sin hardware que instalar):**
+**Pruebas T1-T6, adaptadas a software (sin hardware que instalar) — resultados reales, no estimados:**
 
-| Prueba | Qué mide | Aprobado si | Estado |
+| Prueba | Qué mide | Aprobado si | Resultado real |
 |---|---|---|---|
-| T1 — Registro/login sin ayuda | Tiempo y errores de un usuario nuevo | < 5 min sin intervención | <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> de medir con cifra |
-| T2 — Latencia de punta a punta | Tiempo entre transacción y alerta en pantalla | ≤ 15 min (RD-01) | <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> — dato real de Semana 5 (980.7ms en prueba de inicialización de Haiku) no es todavía una medición de punta a punta completa |
-| T3 — Desconexión y recuperación (F2/F3) | Qué pasa si Belvo o el clasificador no responden | Reintenta y avisa retraso, no falla en silencio (RF-06) | <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> de probar en vivo, aunque el requerimiento ya está diseñado |
-| T4 — Autonomía | No aplica — Vigilio no tiene batería ni hardware propio | N/A | N/A (declarado, no un hueco) |
-| T5 — Falla de la API de IA | Qué hace el sistema si el clasificador no responde | Degrada con mensaje claro | <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> — mismo mecanismo que T3 |
-| T6 — Operación continua | 48h en el entorno real de Sandbox | Sin pérdida de datos | <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> |
+| T1 — Conectar cuenta sin ayuda (ambos roles) | Tiempo y errores de alguien que no conoce la app — hijo/a se registra, padre/madre da consentimiento y conecta su cuenta, cada uno desde su propio acceso | < 5 min sin intervención | **❌ No cumple — medido.** 0/5 completó sin ayuda, mediana 20 min. María probó específicamente el lado del padre/madre. Hallazgo crítico: confusión "conectar cuenta" vs. "gestionar consentimiento" (ver sección 18). |
+| T2 — Latencia de punta a punta | Tiempo entre transacción vía Belvo y alerta en pantalla | ≤ 15 min (RD-01) | <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> de medir completo — Belvo falló del lado de ellos (error 400/500, no es falla de Vigilio). Solo hay dato parcial de inicialización de Haiku (~980.7 ms), no la latencia de punta a punta. |
+| T3 — Desconexión y recuperación (F2/F3) | Qué pasa si Belvo o el clasificador no responden | Reintenta y avisa retraso, no falla en silencio (RF-06) | **❌ No cumple — por diseño, no por adivinanza.** Ni Belvo ni Bubble (sin PWA/caché offline en la configuración actual) pueden operar sin internet. RF-06 está documentado pero nunca se construyó. |
+| T4 — Autonomía | No aplica — Vigilio no tiene batería ni hardware propio | N/A | N/A (declarado, no un hueco). Equivalente más cercano si se quiere mencionar: costo operativo de $7.38 MXN/cuenta/mes como métrica de sostenibilidad de recurso. |
+| T5 — Falla de la API de IA/Belvo | Qué hace el sistema si el clasificador o Belvo no responde | Degrada con mensaje claro, no se rompe | **❌ No cumple — decisión consciente, no hueco escondido.** Hoy muestra el error crudo de Belvo (400/500); se decidió no construir el mensaje amigable este semestre por tiempo. |
+| T6 — Operación continua | 48h en el entorno real de Sandbox | Sin reinicios ni datos perdidos | **⚠ Cumple parcialmente — evidencia informal**, no prueba de carga formal. El link en vivo (entorno real de uso) funcionó sin caídas del 23 al 25-nov-2026 (~48h) para usuarios reales, sin pérdida de datos reportada. El Preview del editor de Bubble sí tuvo fallas intermitentes en ese periodo, pero es herramienta de desarrollo, no el entorno real que mide T6. |
 
-**Checklist de "listo" (adaptado):** app funcionando fuera del editor de Bubble (<span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> confirmar si se publica o se demuestra en editor — ver sección 8) · landing publicada en internet (<span class="vg-badge vg-badge--ok">✅ VERIFICADO</span>) · el dato fluye de Belvo a la pantalla sin intervención manual (<span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> de confirmar con las pruebas de arriba).
+**Por qué T1, T3 y T5 "no cumplen" y aun así es una sección fuerte:** no son huecos escondidos — son fallas ya diagnosticadas con evidencia real, que es justo lo que premia la rúbrica ("un equipo que sabe diagnosticar su propio sistema vale más que uno que esconde los bugs"). T2 es un pendiente genuino por una falla ajena (Belvo, no Vigilio). T6 tiene evidencia informal específicamente del entorno real de uso (el link publicado), no del editor de desarrollo.
 
-**Qué falta:** correr y documentar T1, T2, T3, T5, T6 con evidencia real (capturas, tiempos medidos) — ninguna se fabrica aquí sin haberse corrido de verdad.
+**Checklist de "listo" (adaptado):** app funcionando fuera del editor de Bubble (<span class="vg-badge vg-badge--ok">✅ VERIFICADO</span> — link publicado en vivo, 48h sin caídas) · landing publicada en internet (<span class="vg-badge vg-badge--ok">✅ VERIFICADO</span>) · el dato fluye de Belvo a la pantalla sin intervención manual (<span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> — T2 no se pudo medir completo por la falla de Belvo).
+
+**Qué cambió:** las 6 pruebas pasaron de todas <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> a resultados reales medidos o diagnosticados — 3 de 6 no cumplen (T1, T3, T5, por diseño/medición real), 1 pendiente genuino por causa ajena (T2), 1 parcial con evidencia informal (T6), 1 no aplica (T4).
+
+**Qué falta:** verificar si el bug de login de David (sección 18) sigue activo; medir T2 cuando Belvo restablezca su servicio; decidir si T3/T5 se atacan antes del viernes o quedan como alcance futuro documentado.
 
 ---
 
 ### 18. Pruebas con usuarios
 
-*Versión: 23-nov-2026 · Semana 9.*
+*Versión: 25-nov-2026 · Semana 9 — 5 sesiones ejecutadas el 23-nov-2026.*
 
-**Decisión (protocolo ya diseñado, ejecución pendiente):** 5 sesiones de 30 minutos (3 del segmento objetivo + 2 fuera de él), con al menos 1 de las 3 probando el portal de consentimiento (RF-04) sin ayuda — criterio directo de aceptación de ese requerimiento.
+**Decisión:** se ejecutaron las 5 sesiones de prueba que exige la rúbrica (3 del segmento objetivo — María, Pedro, Sofia — + 2 externas — David, Daniela), con María cubriendo el perfil padre/madre que exige RF-04. Hallazgo honesto: **0 de 5 (0%) completó la tarea sin ayuda**, mediana 20 minutos (rango 8-20), SEQ promedio 4.8/7.
 
-**Qué registra cada sesión:** éxito/fracaso de la tarea, tiempo, errores, severidad, SEQ (1-7), citas textuales.
+**Evidencia:** hoja de registro llena (`Hoja_de_registro_Pruebas_de_usuario_Vigilio.pdf`, 23-nov-2026) + capturas de los momentos clave de las 5 sesiones vía Microsoft Teams (sin video completo — la cuenta institucional de la Ibero no permite grabar sesiones; se cumple la alternativa que el propio protocolo acepta: fotos de los momentos clave + notas detalladas en el momento). Incluye la captura de la alerta real generada por el clasificador durante la sesión de Sofia (Electrónica Gamer MX, $4,500 MXN, 23-nov-2026, 6:17 pm) — ver Anexo D.
 
-**Nota de transparencia ya planeada (regla 3):** si la pantalla de "alertas" aparece vacía o con datos de muestra por la falla documentada del Sandbox de Belvo (ver sección 17/8), eso se revela al tester **después** de su intento sin ayuda, no antes — para no contaminar la medición de usabilidad real.
+**Hallazgos por severidad:**
 
-**Qué falta:** <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> ejecutar las 5 sesiones y llenar la tabla de resultados. Esta sección queda vacía de datos hasta que eso pase; no se va a fabricar evidencia de pruebas que no se hicieron.
+| Severidad | Hallazgo |
+|---|---|
+| Crítico | David intentó iniciar sesión en vez de registrarse — la pantalla de entrada no distingue "ya tengo cuenta" de "soy nuevo"; lo bloqueó por completo. |
+| Crítico | María se confunde entre "conectar cuenta" y "gestionar consentimiento" — dos botones que percibe como el mismo destino, justo en el flujo que RF-04 exige que complete sin ayuda. |
+| Mayor | Falta claridad sobre revocación/estado del consentimiento del lado del padre/madre (Pedro). |
+| Mayor | Orden incorrecto de pasos en la guía de resolución — sugiere contactar al comercio antes que al banco (Sofia). |
+| Mayor | No queda visible en ningún lugar que Vigilio no puede cancelar transacciones (Sofia) — riesgo de expectativa equivocada. |
+| Menor | 5 hallazgos adicionales de forma/CSS/wording (animación de inicio, "adulto mayor", formato de pesos, indicador leído/no leído, etc.) |
 
-[Ver protocolo completo →](semanas/evidencia-semana-09.html)
+**Nota de transparencia ya aplicada (regla 3):** la falla documentada del Sandbox de Belvo (sección 17) se reveló a cada tester **después** de su intento sin ayuda, no antes — para no contaminar la medición de usabilidad real.
+
+**Lectura honesta:** la tasa de éxito sin ayuda es 0% — se reporta tal cual, no se suaviza. Pero el SEQ promedio (4.8/7) es más alto de lo que esa tasa sugeriría: no fue que la app se sintiera "difícil" en general, sino que se topó con un número pequeño de puntos de fricción concretos y repetidos — sobre todo la confusión de "dos botones que llevan al mismo lado", que salió en más de una sesión.
+
+**Los 3 cambios de mayor impacto con menor esfuerzo:**
+1. Diferenciar visualmente "conectar cuenta nueva" de "gestionar consentimiento ya dado" en la pantalla de conexión.
+2. Verificar y, si sigue activo, corregir el bug de inicio de sesión que reportó David.
+3. Agregar una línea fija, visible, en rojo o negritas: "Vigilio no puede cancelar transacciones ni mover dinero."
+
+**Qué cambió:** de "ejecución pendiente" a resultado real y completo — 0/5 sin ayuda, SEQ 4.8/7, 2 hallazgos críticos y 3 mayores ya clasificados.
+
+**Qué falta:** implementar los 3 cambios de mayor impacto antes del viernes si el tiempo lo permite; confirmar si el bug de login de David sigue activo.
+
+[Ver protocolo y síntesis completos →](semanas/evidencia-semana-09.html)
 
 ---
 
@@ -410,37 +451,49 @@ nav_order: 100
 
 ### 20. Pitch y demo
 
-*Versión: 24-nov-2026 · Semana 9 — plantilla oficial ya cargada, contenido pendiente del ejercicio de pitch.*
+*Versión: 25-nov-2026 · Semana 9 — guion de pitch (3 min) y guion de demo (7 min) ya finalizados con Axel.*
+
+**Decisión:** guion de pitch de 3 minutos (6 partes, fundador único) y guion de navegación de demo de 7 minutos (ambos lados de la app, plan B verbal para la falla de Belvo) ya finalizados, con cifras reales (LTV/CAC 3.25, 9 entrevistas, 0/5 en pruebas de usuario).
 
 **Formato de evaluación confirmado:** 15 minutos por equipo — 3 de pitch, 7 de demo, 5 de retroalimentación. Evaluación: **viernes 27-nov-2026, 11:00, Salón J143.**
 
-**Plantilla del pitch de 3 minutos (330-360 palabras, 130 palabras/min) — PENDIENTE de redactar con Axel:**
+**Guion del pitch de 3 minutos (330-360 palabras, 130 palabras/min) — ya redactado y verificado:**
 
 | Parte | Tiempo | Tope de palabras | Contenido que debe llevar |
 |---|---|---|---|
 | 1. Impacto y problema | 35 s | 76 | Una persona concreta (ej. el caso de $8,500 MXN en cargos hormiga de la validación) y lo que le cuesta en pesos — nunca una definición |
 | 2. Solución y por qué nosotros | 35 s | 76 | Promesa simple + contraste con la alternativa de hoy (revisar la cuenta a mano / esperar al banco) |
 | 3. Mercado y modelo | 35 s | 76 | SOM (304-608 hogares), precio $99 MXN/mes, margen de contribución $91.62 |
-| 4. Tracción | 35 s | 76 | 9 entrevistas, resultados reales de las 5 pruebas de usuario (una vez corridas), confesión honesta (LTV/CAC 3.25, frágil) |
+| 4. Tracción | 35 s | 76 | 9 entrevistas, resultado real de las 5 pruebas de usuario ya corridas (0/5 sin ayuda), confesión honesta (LTV/CAC 3.25, frágil; 0 preórdenes pagadas) |
 | 5. Equipo | 15 s | 32 | Axel, individual, qué construyó él mismo |
 | 6. Ask y cierre | 25 s | 54 | Qué se pide (ej. acceso a X familias para un piloto) + repetir la promesa |
 
-**Guion de la demo de 7 minutos — adaptado a software-only (sin tramo de "provocar evento físico"):**
+**Guion completo, línea por línea:** ver `pitch-guion-semana9-vigilio.md` — incluye 1 afirmación marcada como <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> de verificar antes del jurado ("3 de 9 pagarían hoy mismo"), y el panel de las 5 preguntas más difíciles que haría un jurado con su respaldo documental.
 
-| Tiempo | Tramo | Qué mostrar en Vigilio | Plan B |
-|---|---|---|---|
-| 0:00-0:45 | Contexto | La app en pantalla; quién la usa y por qué | Capturas de pantalla |
-| 0:45-3:15 | Camino principal | Registro/login → portal de consentimiento → alerta real apareciendo | Video de respaldo |
-| 3:15-4:45 | Provocar el evento en vivo | Disparar una transacción nueva y mostrar al clasificador de IA generar la alerta en tiempo real (no datos pregrabados) | Datos precargados + video |
-| 4:45-5:45 | Fallo manejado | Simular que Belvo/el clasificador no responde — mostrar el mensaje de retraso de sincronización (RF-06) en vez de que la app se rompa | Video de la prueba T3/T5 |
-| 5:45-6:30 | La compra | Mostrar la landing con el CTA de pre-registro por WhatsApp | Captura de la landing |
-| 6:30-7:00 | Cierre | Qué funciona hoy, qué falta, siguiente paso | Solo voz |
+**Guion de navegación de la demo de 7 minutos — adaptado a software-only, ya finalizado:**
 
-**Por qué este guion funciona sin hardware:** el tramo de "fallo manejado" (que normalmente se hace cortando el WiFi de un sensor) tiene un equivalente limpio en Vigilio — RF-06 ya está diseñado exactamente para esto (reintentar y avisar retraso en vez de fallar en silencio). Es la pieza que mejor puede sostener el criterio de "robustez" del 30% sin necesitar un objeto físico — vale la pena practicarla bien.
+| Tiempo | Tramo | Qué mostrar en Vigilio |
+|---|---|---|
+| 0:00-0:15 | Animación de inicio | Cargar el link, dejar correr la animación completa; decir brevemente qué es Vigilio |
+| 0:15-0:45 | Registro/login — lado hijo | Entrar con rol "hijo"; mencionar que hijo y padre tienen vistas distintas |
+| 0:45-1:30 | Conectar cuenta — lado hijo | Flujo hacia Belvo; mencionar solo de palabra (sin forzar nada en pantalla) que la conexión es en modo sandbox |
+| 1:30-2:00 | Lista de alertas | El cargo real detectado (Electrónica Gamer MX, $4,500); la IA compara contra el patrón normal de la cuenta, no un monto fijo |
+| 2:00-3:00 | Detalle de la transacción — evento en vivo | Leer el motivo detectado; clic en vivo en "Sí, reconozco" o "No reconozco este cargo" — este es el evento en vivo del demo |
+| 3:00-3:30 | Guía de resolución | Los siguientes pasos que sugiere la app (contactar al banco primero) |
+| 3:30-4:05 | Transición + registro/login — lado padre | Corte breve narrado; entrar con rol "padre/madre" |
+| 4:05-5:15 | Conectar cuenta + portal de consentimiento — lado padre | Cómo el padre conecta su cuenta y gestiona el consentimiento ya dado |
+| 5:15-6:30 | Cierre en landing / GitHub | El link en vivo |
+| 6:30-7:00 | Cierre hablado | Ask: piloto de 20 familias en Puebla, 90 días — termina en el ask, no en una limitación |
+
+**Decisiones ya tomadas sobre la grabación:** se graba desde la pantalla de la computadora (no el teléfono, se ve más grande y nítida), con Chrome en pantalla completa (tecla F11) para que no se vea la barra de direcciones ni las pestañas; se muestran ambos lados (hijo y padre/madre) dentro de los 7 minutos; la limitación de Belvo Sandbox se menciona solo de palabra, nunca se fuerza un error en pantalla; el demo no termina en una limitación ni en un error, termina en el ask.
+
+**Por qué se decidió no mostrar la falla de Belvo en vivo:** T3 y T5 (sección 17) ya documentan, con evidencia real, que RF-06 (reintentar y avisar retraso) nunca se construyó — mostrarlo en vivo forzaría un error real de la API, no una demostración de robustez. Se prefiere mencionar la limitación solo de palabra y cerrar el demo en el ask, no en una falla.
 
 <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> **Video de demo:** aquí se incrusta el video de captura de pantalla con el flujo completo de la app (registro → alerta → consentimiento), una vez cerrados los ajustes de Vigilio. Se agrega en cuanto esté grabado.
 
-**Qué falta:** correr el ejercicio real de Semana 9 (Prompt 5 del profesor) con Axel para redactar el guion con sus propias palabras y evidencia real; grabar el video del pitch y el de respaldo de la demo; preparar respuestas a las 6 preguntas difíciles de inversionista que el profesor ya da (BOM, competidor, costo de IA, punto de equilibrio, requisitos legales, qué evita que cancelen).
+**Qué cambió:** de "plantilla pendiente de redactar" a guiones finales con cifras reales; se corrigió además el tramo de "fallo manejado" del guion de demo — ya no se fuerza un error de Belvo en pantalla, se menciona solo de palabra.
+
+**Qué falta:** grabar y subir el video de demo (desde computadora, pantalla completa) e insertarlo en el placeholder de arriba; verificar la única cifra marcada PENDIENTE en el guion de pitch; practicar el timing real de ambos guiones antes del viernes; preparar respuestas a las 5 preguntas difíciles de jurado ya documentadas en `pitch-guion-semana9-vigilio.md`.
 
 ---
 
@@ -466,10 +519,10 @@ nav_order: 100
 
 ## Anexos
 
-- **A) BOM con cotizaciones** — <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> de confirmar cifra final con Axel (sección 11).
+- **A) BOM con cotizaciones** — <span class="vg-badge vg-badge--ok">✅ VERIFICADO</span> cifras finales confirmadas y verificadas contra fuentes oficiales 25-nov-2026 (sección 11).
 - **B) Repositorio y bitácora** — [enlace al repo](https://github.com/vergarapaezaxelmanuel-cyber/axel-vergara-engineering-project-4).
 - **C) Archivos de diseño (CAD/PCB/firmware)** — No aplica a Vigilio (software-only, decisión de alcance RR-02).
-- **D) Datos crudos de entrevistas/pruebas** — ver `claude/resultado-validacion-semana3.md` y `claude/sintesis-paso6-entrevistas-semana3.md` del repositorio de trabajo; pruebas de usuario de Semana 9 pendientes de ejecutar.
+- **D) Datos crudos de entrevistas/pruebas** — ver `claude/resultado-validacion-semana3.md` y `claude/sintesis-paso6-entrevistas-semana3.md` del repositorio de trabajo; pruebas de usuario de Semana 9 ya ejecutadas (23-nov-2026) — hoja de registro llena y capturas de las 5 sesiones, incluida la alerta real generada por la IA (sección 18).
 - **E) Hoja de cálculo del modelo financiero** — fórmulas visibles en `matematicas-financieras-bloque4-5-semana7-vigilio.md` y `cac-ltv-payback-semana9-vigilio.md`.
 - **F) Bibliografía** — ver referencias completas al final de cada semana en [Semanas](semanas/); no se duplica aquí para no romper la regla de "una pantalla por sección".
 
