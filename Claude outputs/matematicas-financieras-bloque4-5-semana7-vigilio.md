@@ -1,5 +1,7 @@
 ---
 layout: default
+nav_exclude: true
+search_exclude: true
 title: Matemáticas financieras (Bloque 4-5) — Semana 7 (Vigilio)
 ---
 

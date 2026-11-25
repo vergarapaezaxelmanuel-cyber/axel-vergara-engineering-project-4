@@ -1,5 +1,7 @@
 ---
 layout: default
+nav_exclude: true
+search_exclude: true
 title: BOM adaptado y Costo de la IA — Semana 7 (Vigilio)
 ---
 

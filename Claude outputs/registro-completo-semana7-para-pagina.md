@@ -1,5 +1,7 @@
 ---
 layout: default
+nav_exclude: true
+search_exclude: true
 title: Semana 7 — Registro Completo de Prompts y Resultados
 ---
 

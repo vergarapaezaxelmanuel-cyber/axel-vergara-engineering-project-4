@@ -1,5 +1,7 @@
 ---
 layout: default
+nav_exclude: true
+search_exclude: true
 title: Plan de Prototipado y DFM adaptado — Semana 8 (Vigilio)
 ---
 
