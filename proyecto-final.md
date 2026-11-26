@@ -39,7 +39,7 @@ Pica el tema que quieras ver — te lleva directo a esa sección, sin tener que 
 
 *Versión: 25-nov-2026 · Semana 9.*
 
-**Vigilio** (escudo con el ojo) — *"Vigilio vigila lo que tu banco no ve."*
+**Vigilio** <img src="assets/images/vigilio-icon.png" alt="ícono de Vigilio: escudo con un ojo" width="28" style="vertical-align:middle;"> — *"Vigilio vigila lo que tu banco no ve."*
 
 **Propuesta de valor (≤25 palabras):** "A diferencia de la banca tradicional, que tarda meses en innovar, Vigilio ya avisa hoy de los cargos chicos que ellos tardan en detectar."
 
