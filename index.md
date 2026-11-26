@@ -8,6 +8,10 @@ nav_order: 1
 
 Esta es mi página individual para el curso **Proyecto de Ingeniería IV** (Otoño 2026, Ibero Puebla).
 
+<p align="center">
+  <img src="assets/images/vigilio-logo.png" alt="Vigilio" width="280">
+</p>
+
 ## Navegación
 
 - [About me](./about.html) — quién soy, mi historia y hacia dónde voy.
