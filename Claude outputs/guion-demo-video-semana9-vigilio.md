@@ -1,4 +1,6 @@
----
+﻿---
+nav_exclude: true
+search_exclude: true
 title: "Guion de navegación — Video demo (7 minutos, Semana 9, Vigilio)"
 fecha: "25-nov-2026"
 ---
