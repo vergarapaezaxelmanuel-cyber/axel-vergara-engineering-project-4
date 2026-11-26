@@ -54,7 +54,7 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 **Estado honesto, en una oración:** MVP funcional con ambos lados (hijo y padre/madre) construido y probado; 0 de 5 pruebas de usuario se completaron sin ayuda y 0 preórdenes pagadas, con los 3 ajustes prioritarios ya identificados.
 
-**Enlaces:** [repositorio y bitácora](https://github.com/vergarapaezaxelmanuel-cyber/axel-vergara-engineering-project-4) · landing (sección 19) · pitch y demo (sección 20 — video en camino).
+**Enlaces:** [repositorio y bitácora](https://github.com/vergarapaezaxelmanuel-cyber/axel-vergara-engineering-project-4) · [app en vivo](https://vergarapaezaxelmanuel.bubbleapps.io/version-test) · landing (sección 19) · pitch y demo (sección 20 — video en camino).
 
 ---
 
@@ -255,6 +255,8 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 **Decisión:** la app está construida en Bubble — 11 páginas (índice, inicio, alertas, conectar_cuenta, detalle_transaccion, guia_resolucion, portal_consentimiento, suscripcion, pago_confirmado, restablecer_pw, 404).
 
+**Cómo verla en vivo:** [vergarapaezaxelmanuel.bubbleapps.io/version-test](https://vergarapaezaxelmanuel.bubbleapps.io/version-test)
+
 **Flujo verificado en Preview — lado hijo/a:** `alertas` (tarjeta con color por estado) → `detalle_transaccion` (datos reales) → "Sí, reconozco"/"No reconozco" → `guia_resolucion` → vuelta a `alertas`.
 
 **Flujo verificado — lado padre/madre:** `conectar_cuenta` → `portal_consentimiento` (texto 100% dinámico: hijo/a, banco, fecha).
@@ -263,7 +265,7 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 **Limitación documentada:** Belvo Sandbox falló en las instituciones con recurso de transacciones (errores 400/500, comportamiento conocido de Belvo); se usan datos simulados con el esquema real de Belvo — equivalente a un *test double* de ingeniería de software (Fowler, 2007), no un dato inventado sin criterio.
 
-**Qué falta:** insertar 3-4 capturas reales de las pantallas; confirmar enlace al editor/preview de Bubble.
+**Qué falta:** insertar 3-4 capturas reales de las pantallas.
 
 ---
 
