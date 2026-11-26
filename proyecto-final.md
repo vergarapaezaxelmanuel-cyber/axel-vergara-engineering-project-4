@@ -6,6 +6,10 @@ nav_order: 100
 
 # Vigilio — página de memoria del proyecto
 
+<p align="center">
+  <img src="assets/images/vigilio-logo.png" alt="Logotipo de Vigilio" width="220">
+</p>
+
 **Versión de esta página: 25-nov-2026.** Esta página es guía semanal, plan de negocio y memoria de calificación a la vez — cada sección muestra una decisión del equipo y su evidencia, no una respuesta de IA copiada. Donde falta evidencia real, se marca **PENDIENTE**, no se rellena para que se vea completo. El detalle extendido de cada semana vive en [Semanas](semanas/) — aquí va la versión de una pantalla por sección.
 
 **Equipo:** Axel Vergara Páez — trabajo individual, confirmado con el profesor (ver sección 1).
@@ -54,7 +58,7 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 **Estado honesto, en una oración:** MVP funcional con ambos lados (hijo y padre/madre) construido y probado; 0 de 5 pruebas de usuario se completaron sin ayuda y 0 preórdenes pagadas, con los 3 ajustes prioritarios ya identificados.
 
-**Enlaces:** [repositorio y bitácora](https://github.com/vergarapaezaxelmanuel-cyber/axel-vergara-engineering-project-4) · [app en vivo](https://vergarapaezaxelmanuel.bubbleapps.io/version-test) · landing (sección 19) · pitch y demo (sección 20 — video en camino).
+**Enlaces:** [repositorio y bitácora](https://github.com/vergarapaezaxelmanuel-cyber/axel-vergara-engineering-project-4) · <a href="https://vergarapaezaxelmanuel.bubbleapps.io/version-test" style="font-weight:700; background:#fde68a; color:#1a1a2e; padding:3px 10px; border-radius:6px; text-decoration:none; display:inline-block;">👉 app en vivo — pícale aquí</a> · landing (sección 19) · pitch y demo (sección 20 — video Plan B en camino).
 
 ---
 
@@ -362,7 +366,7 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 |---|---|
 | Belvo autorizado por la CNBV como IFPE bajo la Ley Fintech | <span class="vg-badge vg-badge--ok">✅ VERIFICADO</span> (LatamFintech, 2022) |
 | Open Finance Fase 1 (datos abiertos) en vigor | <span class="vg-badge vg-badge--ok">✅ VERIFICADO</span> desde 2020 |
-| Open Finance Fase 3 (datos transaccionales) regulada | <span class="vg-badge vg-badge--pending">⚠️ POR VERIFICAR</span> — sin regulación secundaria publicada; amparo activo desde dic-2025 (El Financiero, 2026) |
+| Open Finance Fase 3 (datos transaccionales) regulada | <span class="vg-badge vg-badge--pending">⚠️ PARCIAL</span> — ya sabemos que no hay regulación secundaria publicada todavía (amparo activo desde dic-2025, El Financiero 2026); lo que falta no depende de nosotros, depende de que el regulador la publique |
 | Vigilio comunica solo la autorización de Belvo, no una propia | <span class="vg-badge vg-badge--ok">✅ VERIFICADO</span> (RR-04) |
 | Cumplimiento LFPDPPP (consentimiento revocable, ciclo de vida de datos) | <span class="vg-badge vg-badge--ok">✅ VERIFICADO</span> como requerimiento (RR-01, RR-07) |
 
@@ -391,14 +395,16 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 | Prueba | Aprobado si | Resultado real |
 |---|---|---|
-| T1 — Conectar cuenta sin ayuda | < 5 min sin intervención | **❌ No cumple.** 0/5 completó sin ayuda, mediana 20 min. Confusión "conectar cuenta" vs. "gestionar consentimiento" (sección 18). |
-| T2 — Latencia de punta a punta | ≤ 15 min (RD-01) | <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> — Belvo falló del lado de ellos. Solo hay dato parcial de Haiku (~980.7 ms). |
+| T1 — Conectar cuenta sin ayuda | < 5 min sin intervención | **No se logró.** Se corrió la prueba real con los 5 usuarios; 0/5 completó sin ayuda, mediana 20 min. Confusión "conectar cuenta" vs. "gestionar consentimiento" (sección 18). |
+| T2 — Latencia de punta a punta | ≤ 15 min (RD-01) | **No se pudo medir — Belvo falló de su lado** (ver aclaración abajo). Solo hay dato parcial de Haiku (~980.7 ms). |
 | T3 — Desconexión y recuperación | Reintenta y avisa retraso (RF-06) | **❌ No cumple — por diseño.** RF-06 está documentado pero nunca se construyó. |
 | T4 — Autonomía | N/A | N/A — sin hardware propio. |
-| T5 — Falla de la API/Belvo | Degrada con mensaje claro | **❌ No cumple — decisión consciente.** Hoy muestra el error crudo de Belvo. |
+| T5 — Falla de la API/Belvo | Degrada con mensaje claro | **❌ No cumple — decisión consciente.** Hoy muestra el error crudo de Belvo (misma causa de fondo que T2, ver aclaración abajo). |
 | T6 — Operación continua (48h) | Sin reinicios ni datos perdidos | **⚠ Parcial — evidencia informal.** El link en vivo funcionó sin caídas 23-25-nov (~48h) para usuarios reales. |
 
-**Por qué T1/T3/T5 "no cumplen" y aun así es fuerte:** son fallas ya diagnosticadas con evidencia real, no huecos escondidos. T2 es pendiente genuino por causa ajena (Belvo).
+**Aclaración (T2 y T5):** la documentación oficial de Belvo para desarrolladores advierte, sobre sus instituciones "externally-managed" del entorno Sandbox, que *"this is an externally-managed sandbox environment, as such we cannot guarantee the quality of the data nor the uptime of the sandbox institution"* (Belvo, s.f., sección "Aggregation Coverage"). Es decir: Belvo mismo documenta, desde antes de que empezáramos a integrar, que estas instituciones mock pueden fallar o no responder, sin garantía de calidad de datos ni de disponibilidad. **La parte honesta que no queremos ocultar:** ese aviso ya existía en su documentación, pero no lo revisamos a tiempo — lo detectamos hasta que la falla ya nos había costado semanas de desarrollo cerca de la entrega, no antes de empezar a integrar. Con el tiempo que quedaba, no nos convino rediseñar el manejo de errores alrededor de esta falla puntual (eso es justo lo que falta en T3/RF-06); se documenta tal cual, con la causa identificada y citada en vez de minimizarla.
+
+**Por qué T1 no se logró y T3/T5 no cumplen, y aun así es evidencia fuerte:** son fallas ya diagnosticadas con evidencia real, no huecos escondidos. T2 quedó sin medir por una causa ajena al equipo (Belvo), no por falta de intento.
 
 **Qué falta:** verificar si el bug de login de David (sección 18) sigue activo; medir T2 cuando Belvo restablezca su servicio.
 
@@ -471,9 +477,9 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 **Guion completo del demo, con tiempos por pantalla:** [ver guion de navegación →](Claude%20outputs/guion-demo-video-semana9-vigilio.html)
 
-<span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> **Video de demo:** aquí se incrusta el video de captura de pantalla con el flujo completo de la app, una vez grabado.
+<span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> **Video de demo (Plan B):** la demo real el viernes se hace en vivo, directamente en la app — este video es el respaldo por si algo falla durante la presentación, no la opción principal. Aquí se incrusta una vez grabado.
 
-**Qué falta:** grabar y subir el video; practicar el timing de ambos guiones antes del viernes.
+**Qué falta:** grabar y subir el video de Plan B; practicar el timing de ambos guiones antes del viernes.
 
 ---
 
@@ -481,33 +487,49 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 ### 21. Uso de IA en el proyecto {#sec-21}
 
-*Versión: 23-nov-2026.*
+*Versión: 26-nov-2026.*
 
-<span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> seleccionar los 5 prompts que más cambiaron el proyecto (registro completo por semana ya existe) y redactar: qué hace el modelo en el producto, costo medido por usuario, qué pasa si falla, y por qué el producto sería peor sin IA.
+**Los 5 prompts que más cambiaron el proyecto:**
 
-**Declaración de transparencia:** toda esta página se construyó con apoyo de Claude (Anthropic) como asistente de investigación, redacción y organización — cada prompt relevante está registrado por semana; ninguna prueba de usuario, entrevista o resultado reportado aquí fue generado o simulado por IA en lugar de hacerse de verdad.
+1. **Semana 2 — verificación de evidencia de deseabilidad.** Se pidió a otra IA (Perplexity) verificar 5 señales de deseabilidad con fuentes reales; devolvió 2 que no se pudieron confirmar de forma independiente (publicaciones de Reddit y una cifra de Facebook). **Caso donde la IA se equivocó:** al revisar esa cifra de Facebook directamente, resultó ser de una nota sobre fraude en apps de préstamos, no sobre fraude a adultos mayores — un dato de otro tema, mal aplicado. Se corrigió reemplazándola por fuentes sí verificadas (Condusef/El Imparcial, 2026), documentado en `reporte-oportunidad-semana2.md`.
+2. **Semana 2 — selección de concepto.** Un prompt tipo SCAMPER disruptivo generó y comparó 3 conceptos de negocio distintos (Vigía Corporativo, Guardián Fiduciario, Vigía de Confianza Bancaria) contra el filtro Deseable/Novedoso/Viable. El resultado llevó al pivote real: de un modelo pensado para venderse a bancos, a "Vigilio, modelo hijo-papá" vendido directo a la familia — el concepto que se desarrolló todo el semestre.
+3. **Semana 5 — auditoría del PDS.** Se usó el prompt de validación real del profesor (encontrado en el código fuente de su página, no la versión resumida) para auditar un PDS preliminar de 16 requerimientos. La IA encontró 4 huecos reales no considerados (reconexión, manejo de fallo de integración bancaria, accesibilidad para el padre/madre, revocación de datos ya descargados) — se agregaron como RF-05, RF-06, RI-05 y RR-07, llegando a los 22 requerimientos finales.
+4. **Semana 3 — búsqueda y selección de marca.** Se evaluaron 3 finalistas (Vigilio, Alento, Kuido) sobre 5 criterios de branding y se cruzaron contra una búsqueda real en el IMPI. La IA identificó que "Kuido" tenía una marca idéntica ya registrada — se descartó antes de invertir más tiempo en ese nombre, dejando a Vigilio como la opción limpia.
+5. **Semana 9 — diagnóstico de la falla de Belvo Sandbox.** Ante dos instituciones mock que fallaban (errores 400/500), se investigó si era un bug propio o conocido; se encontró el respaldo oficial en la documentación de Belvo (instituciones "externally-managed", sin garantía de uptime) y se propuso documentar la limitación con datos simulados pero con el esquema real — encuadrado como *test double* de ingeniería de software (Fowler, 2007) — en vez de ocultarla o fabricar una integración que no funcionaba.
+
+**En el producto — qué hace el modelo de IA:** Claude Haiku 5.5 corre vía API (nunca en el teléfono o la computadora del usuario) y compara cada transacción nueva contra el historial normal de esa cuenta — no contra un monto fijo. Recibe los datos de la transacción con el esquema real de Belvo (fecha, monto, comercio, categoría, tipo) y el historial reciente de la cuenta; devuelve una clasificación (sospechosa/normal) y un motivo en lenguaje natural, que es lo que ve el hijo/a en `detalle_transaccion`.
+
+**Costo medido por usuario:** ~$7.39 MXN/cuenta/mes (ver `bom-costo-ia-semana7-vigilio.md`) — menos del 2% del costo unitario total (sección 14).
+
+**Qué pasa si falla:** si la llamada a Haiku falla o tarda demasiado, hoy no se crea una nueva Alerta y el hijo/a simplemente no ve nada nuevo — una falla silenciosa, no un mensaje de error (mismo hueco que T5, sección 17). Es una limitación real, no oculta.
+
+**Por qué el producto sería peor sin IA:** un sistema de reglas fijas necesitaría un umbral de monto por cuenta, y fallaría en los dos sentidos — marcaría como sospechosa una compra grande pero legítima (ej. una compra de temporada), y dejaría pasar justo el patrón que motivó el proyecto: cargos chicos y repetidos de card testing, que nunca cruzan un umbral de monto. Comparar contra el patrón histórico de cada cuenta (comercio, horario, tipo de gasto) es lo que permite detectar eso — es el mecanismo central del producto, no un extra.
+
+**Declaración de transparencia:** toda esta página se construyó con apoyo de Claude (Anthropic) como asistente de investigación, redacción y organización — cada prompt relevante está registrado por semana (ver [Semanas](semanas/)); ninguna prueba de usuario, entrevista o resultado reportado aquí fue generado o simulado por IA en lugar de hacerse de verdad.
 
 ---
 
 ### 22. Reflexión y siguientes pasos {#sec-22}
 
-*Versión: 23-nov-2026.*
+*Versión: 26-nov-2026.*
 
-<span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> se llena después de la presentación del viernes: aprendizaje del semestre, qué se haría distinto, hipótesis críticas sin verificar, plan de 90 días, y riesgos.
+**Aprendizaje del semestre:** construir Vigilio solo, de punta a punta (investigación, PDS, arquitectura, prototipo, modelo financiero, pruebas de usuario y pitch), dejó claro que la parte más difícil no fue la tecnología — fue validar con evidencia real en cada paso en vez de avanzar sobre supuestos cómodos. El hallazgo más incómodo y más útil del semestre: la lógica de negocio puede estar bien pensada (LTV/CAC 3.25, segmento validado con 9 entrevistas) y aun así la app ser difícil de usar en la práctica — 0 de 5 personas completaron la tarea sin ayuda. Son dos tipos de validación distintos, y ninguno sustituye al otro.
+
+**Qué se haría distinto:** (1) probar las instituciones mock de Belvo Sandbox mucho antes, no ya cerca de la entrega — la falla de las dos instituciones con recurso de transacciones consumió tiempo que se pudo haber usado en corregir los hallazgos de las pruebas de usuario. (2) Entrevistar fuera del círculo familiar cercano desde la Semana 3, no después — la muestra real quedó concentrada en 2-3 núcleos familiares, lo que debilita qué tanto se puede generalizar. (3) Construir el manejo de errores (RF-06, T3/T5) en paralelo al resto de la app, no dejarlo para el final, donde ya no hubo tiempo.
+
+**Hipótesis críticas sin verificar:** que el precio de $99 MXN/mes convierte en la práctica, no solo suena bien en una entrevista (sección 3, 14); que el patrón de "involucramiento activo predice disposición a pagar" se sostiene fuera del círculo familiar de Axel; que el CAC de $500 MXN (hoy supuesto de modelo) se parece al CAC real una vez que haya campañas corriendo (sección 15).
+
+**Plan de 90 días (si el piloto avanza):** ejecutar el piloto de 20 familias en Puebla planteado en el pitch (sección 20); implementar primero los 3 cambios de mayor impacto encontrados en las pruebas de usuario (sección 18); medir T2 (latencia real) en cuanto Belvo deje de fallar; usar el flujo de pre-orden por WhatsApp para por fin medir disposición a pagar con comportamiento real, no solo con lo dicho en entrevista.
+
+**Riesgos:** el 30% de la rúbrica para "producto físico con IA" sigue sin una respuesta por escrito del profesor sobre cómo se adapta a un proyecto 100% software — el riesgo de calificación más grande del proyecto, fuera del control de Axel. Depender de un solo fundador (sin equipo) es un riesgo real de continuidad si el proyecto avanza más allá del semestre. Y el costo de pasar Belvo de Sandbox a Producción (~$17,580 MXN/mes) sigue siendo la barrera de escala más grande del modelo (sección 10, 14).
 
 ---
 
 ## Anexos {#anexos}
 
-- **A) BOM con cotizaciones** — <span class="vg-badge vg-badge--ok">✅ VERIFICADO</span> (sección 11).
-- **B) Repositorio y bitácora** — [enlace al repo](https://github.com/vergarapaezaxelmanuel-cyber/axel-vergara-engineering-project-4).
-- **C) Archivos de diseño (CAD/PCB/firmware)** — No aplica (software-only, RR-02).
-- **D) Datos crudos de entrevistas/pruebas** — hoja de registro y capturas de las 5 sesiones de Semana 9, incluida la alerta real generada por la IA (sección 18).
+- **A) BOM con cotizaciones** — <span class="vg-badge vg-badge--ok">✅ VERIFICADO</span>, ver [sección 11](#sec-11).
+- **B) Repositorio y bitácora** — [enlace al repo de GitHub de este proyecto](https://github.com/vergarapaezaxelmanuel-cyber/axel-vergara-engineering-project-4) (historial de commits y todos los documentos de cada semana).
+- **C) Archivos de diseño (CAD/PCB/firmware)** — No aplica (software-only, RR-02). Esta letra es parte del formato fijo de Anexos A-F que pide el profesor para todos los proyectos; se deja explícita como "No aplica" en vez de omitirla, igual que T4 en la sección 17.
+- **D) Datos crudos de entrevistas/pruebas** — [ver evidencia completa de Semana 9 →](semanas/evidencia-semana-09.html) (hoja de registro y capturas de las 5 sesiones, incluida la alerta real generada por la IA — sección 18).
 - **E) Hoja de cálculo del modelo financiero** — fórmulas en `matematicas-financieras-bloque4-5-semana7-vigilio.md` y `cac-ltv-payback-semana9-vigilio.md`.
 - **F) Bibliografía** — ver referencias al final de cada semana en [Semanas](semanas/).
-
----
-
-## ⚠️ Nota de riesgo abierta (no resuelta en esta versión)
-
-La rúbrica real pesa **"Producto físico funcionando con IA" en 30%** — el criterio individual más pesado de toda la evaluación. Vigilio es, por decisión de alcance ya tomada (RR-02), software-only. Esta tensión está identificada pero **deliberadamente no resuelta en esta versión de la página**.
