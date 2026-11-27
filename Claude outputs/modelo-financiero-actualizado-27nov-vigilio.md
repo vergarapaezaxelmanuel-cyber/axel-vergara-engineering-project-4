@@ -1,6 +1,8 @@
 ---
 title: "Modelo financiero actualizado — con Belvo en producción (27-nov-2026)"
 fecha: "27-nov-2026"
+nav_exclude: true
+search_exclude: true
 ---
 
 # Modelo financiero de Vigilio — cifras reales actualizadas

@@ -92,6 +92,11 @@ Belvo vigila la cuenta en segundo plano y manda un webhook (`new_transactions_av
 
 Son dos modelos de costo distintos: Belvo cobra tarifa plana ($1,000 USD/mes en producción, sin importar el volumen de cuentas), mientras que Claude Haiku cobra por uso real ($0.00025 USD por clasificación, menos de medio centavo de peso mexicano). A la frecuencia estimada de ~1 llamada/día por cuenta, el costo de IA es de apenas $0.13 MXN/mes por cuenta.
 
+## ¿De dónde sacas que ~85% de los adultos mayores tiene al menos un hijo adulto?
+**Fuente:** Monroy-Gómez-Franco & Vélez-Grajales (2015)
+
+No existe una cifra mexicana oficial exacta para esto — es el supuesto más frágil del tamaño de mercado, buscado a propósito por ser el más frágil. El Mexican Health and Aging Study (MHAS, Ola 3, 2012, N=13,102) encontró que entre adultos mexicanos de 75 años o más, solo ~4% no tuvo hijos — es decir, ~96% sí tuvo al menos uno. Es una cohorte algo mayor que el rango de 60-70 años del proyecto, pero dadas las tasas de fecundidad más altas de esas generaciones (4.7-6.9 hijos en promedio por persona), el supuesto del 85% usado en el modelo es conservador, no inflado para que el número se vea bien.
+
 ## ¿Cuál es el punto de equilibrio real del negocio?
 **Fuente:** `modelo-financiero-actualizado-27nov-vigilio.md`; Belvo (2026)
 

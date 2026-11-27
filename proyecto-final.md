@@ -337,6 +337,8 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 **Qué falta:** confirmar con el profesor si existe un tope real de presupuesto en pesos; validar con Belvo el costo exacto del plan Launch fuera de su página pública de precios.
 
+**Modelo financiero completo, con el desglose cifra por cifra:** [ver documento completo →](Claude%20outputs/modelo-financiero-actualizado-27nov-vigilio.html)
+
 [Ver Semana 7 →](semanas/evidencia-semana-07.html)
 
 ---
