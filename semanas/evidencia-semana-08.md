@@ -151,6 +151,12 @@ La revisión DFM del Paso 3 detectó que el onboarding asistido por videollamada
 
 **Construcción del video del clasificador (no salió a la primera):** el video se construyó con un prompt que simula al clasificador de Vigilio evaluando una transacción contra un historial de cuenta. La primera versión incluyó, por error, una respuesta donde el asistente proponía "bloquear la tarjeta" — contradice la arquitectura real del sistema (solo lectura vía Belvo, RI-01, sin capacidad de bloquear ni mover dinero), así que corregí el prompt para prohibir explícitamente esa acción. La segunda versión corrigió eso, pero dejó una advertencia de limitación (sobre el tamaño de la ventana de datos) filtrada dentro de la respuesta que vería el usuario, lo cual podía dar la impresión de que el producto no funciona bien — separé esa advertencia del mensaje de cara al usuario. La tercera versión, ya limpia en ambos aspectos, fue la que grabé para el video final.
 
+**Actualización (27-nov-2026):** este video simulado fue reemplazado en la landing (`prototipo-vigilio.html`) por un fragmento del demo real de la app, ya construida y funcionando de punta a punta. Se archiva aquí como evidencia del prototipo original de Semana 8, no se borra:
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:480px;margin:1rem auto;">
+  <iframe src="https://www.youtube.com/embed/Iqx4OyEjZKc" title="Video original del prototipo de negocio, Semana 8 (simulado)" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+
 ```
 REPORTE DE PROTOTIPO — Semana 8
 Equipo: Axel Vergara Páez · Concepto: Vigilio a Distancia

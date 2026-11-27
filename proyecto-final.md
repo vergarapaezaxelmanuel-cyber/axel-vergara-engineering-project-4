@@ -444,11 +444,11 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 ### 19. Landing page {#sec-19}
 
-*Versión: 23-nov-2026 · Semana 9.*
+*Versión: 27-nov-2026 · Semana 8 (prototipo) actualizada en Semana 9.*
 
-**Decisión:** landing publicada en GitHub Pages — [prototipo-vigilio.html](prototipo-vigilio.html).
+**Decisión:** landing publicada en GitHub Pages — [prototipo-vigilio.html](prototipo-vigilio.html). Headline y propuesta de valor ya actualizados con el dato validado de "hasta 12 meses" (sección 4) y las cifras reales de validación (9 entrevistas, 3/9 dispuestos a pagar, caso real de $8,500 MXN). El video original (simulado, Semana 8) se archivó como evidencia en [evidencia de Semana 8](semanas/evidencia-semana-08.html) y se reemplazó por un fragmento del demo real de la app funcionando de punta a punta.
 
-**Qué falta:** <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> refrescar la cifra de contactos/pre-órdenes y confirmar headline y CTA actuales.
+**Qué falta:** nada pendiente de este lado — confirmar con el profesor/panel si la cifra de pre-órdenes por WhatsApp cambió desde la pre-reserva (sección 10).
 
 ---
 
