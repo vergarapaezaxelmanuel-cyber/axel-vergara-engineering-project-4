@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Guion de navegación — Video demo (5 minutos con 12 segundos, Semana 9, Vigilio)"
 fecha: "26-nov-2026 (reestructurado a lista numerada, un paso = una acción o una frase, para seguir scrolleando en el teléfono mientras grabas desde la computadora)"
 nav_exclude: true

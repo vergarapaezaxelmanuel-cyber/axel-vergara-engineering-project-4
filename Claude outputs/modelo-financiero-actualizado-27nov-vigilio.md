@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Modelo financiero actualizado — con Belvo en producción (27-nov-2026)"
 fecha: "27-nov-2026"
 nav_exclude: true

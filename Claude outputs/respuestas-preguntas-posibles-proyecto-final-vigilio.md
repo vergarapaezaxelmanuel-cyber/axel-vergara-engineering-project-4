@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Respuestas a posibles preguntas (Vigilio)"
 fecha: "27-nov-2026"
 nav_exclude: true
