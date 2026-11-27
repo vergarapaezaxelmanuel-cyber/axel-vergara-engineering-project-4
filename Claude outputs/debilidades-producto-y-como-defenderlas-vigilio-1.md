@@ -1,6 +1,8 @@
 ---
 title: "Temas débiles de Vigilio y cómo defenderlos en la presentación (documento interno, NO para la página)"
 fecha: "25-nov-2026 (actualizado 26-nov-2026: nuevo hallazgo sobre cuenta compartida padre/hijo)"
+nav_exclude: true
+search_exclude: true
 ---
 
 # Temas débiles de Vigilio — qué falta, por qué es real, y cómo argumentarlo

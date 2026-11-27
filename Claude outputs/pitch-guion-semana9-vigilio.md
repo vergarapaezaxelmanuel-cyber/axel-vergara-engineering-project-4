@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Guion de pitch — 3 minutos (Semana 9, Vigilio)
+nav_exclude: true
+search_exclude: true
 ---
 
 # Guion de pitch — 3 minutos
