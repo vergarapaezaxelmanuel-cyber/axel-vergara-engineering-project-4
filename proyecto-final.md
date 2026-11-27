@@ -243,7 +243,7 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 *Versión: 25-nov-2026 · Semanas 5, 7 y 8.*
 
-**Decisión:** Vigilio es software-only (RR-02). El "BOM" es costo de servicios: Belvo Sandbox $0, clasificador Claude Haiku 5.5 (centavos de dólar/clasificación), Bubble Starter $685.62 MXN/mes si se publica, más Claude Pro $351.60 MXN/mes (asistente de desarrollo de Axel, no el motor de la app).
+**Decisión:** Vigilio es software-only (RR-02). El "BOM" es costo de servicios: Belvo $0 en Sandbox (desarrollo) pero **$17,580 MXN/mes en producción** (plan Launch, necesario para conectar cuentas bancarias reales — ver sección 14), clasificador Claude Haiku 5.5 (centavos de dólar/clasificación), Bubble Starter $685.62 MXN/mes si se publica, más Claude Pro $351.60 MXN/mes (asistente de desarrollo de Axel, no el motor de la app).
 
 **Evidencia:** detalle completo en `bom-costo-ia-semana7-vigilio.md`, verificado contra `bubble.io/pricing` y `claude.com/pricing` (25-nov-2026).
 
@@ -290,7 +290,7 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 | Modelo de ingresos y precio | Freemium — gratis hasta el primer problema, luego $99 MXN/mes | Sección 14 |
 | Canales | Venta directa (landing con CTA de WhatsApp); boca a boca en el círculo cercano | Sección 19 |
 | Propuesta de valor | "Vigilio vigila lo que tu banco no ve" | Sección 5 |
-| Costos | Belvo Sandbox $0; Claude Haiku, centavos de dólar/clasificación; Bubble $685.62 MXN/mes; Claude Pro $351.60 MXN/mes | Sección 14 |
+| Costos | Belvo producción $17,580 MXN/mes (el costo fijo dominante); Claude Haiku, centavos de dólar/clasificación; Bubble $685.62 MXN/mes; Claude Pro $351.60 MXN/mes | Sección 14 |
 | Socios | Belvo (IFPE/CNBV); Anthropic (API del modelo de IA) | Secciones 8, 16 |
 | Equipo y recursos | Axel Vergara Páez (individual); Bubble; Claude como asistente de desarrollo | Sección 1 |
 
@@ -308,24 +308,34 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 ### 14. Costos, precio y viabilidad financiera {#sec-14}
 
-*Versión: 25-nov-2026 · Semana 7.*
+*Versión: 27-nov-2026 · actualizado con el costo real de Belvo en producción (antes se usaba Belvo Sandbox, $0, que no sirve para cuentas bancarias reales).*
 
-**Decisión:** precio recomendado **$99 MXN/mes** — ni el cost-plus de piloto ($492/mes a 10 cuentas) ni el value-based de un caso extremo ($70.83/mes), sino el ya validado por entrevista real.
+**Decisión:** precio recomendado **$99 MXN/mes** — no es barato "porque sí": con el costo fijo real de operar (dominado por Belvo en producción), el cost-plus a escala pequeña pide mucho más que $99 ($2,953.49/mes a 10 cuentas), y solo baja hasta justificarse por costos (margen 40%) a partir de ~332 cuentas pagando — justo la escala a la que apunta la meta de año 1-2 (304-608 hogares). El precio de $99 se sostiene por el tamaño de mercado al que se apunta, no por ser barato de operar hoy.
+
+**Costo fijo mensual real (reemplaza la cifra anterior que asumía Belvo Sandbox gratis):**
+
+| Componente | Costo/mes |
+|---|---|
+| Bubble Starter | $685.62 MXN |
+| Claude Pro | $351.60 MXN |
+| Dominio propio | $18.75 MXN |
+| **Belvo producción** (plan Launch, real — no Sandbox) | **$17,580.00 MXN** |
+| **Total costo fijo mensual** | **$18,635.97 MXN** |
 
 **Evidencia — unit economics:**
 
 | Métrica | Valor |
 |---|---|
 | Margen de contribución | $91.62 MXN/cuenta/mes |
-| Punto de equilibrio (solo operativo) | 12 cuentas — ✅ alcanzable dentro del piloto (20-30) |
-| Punto de equilibrio (recuperando inversión en 12 meses) | 38 cuentas — ❌ excede el techo del piloto |
-| Flujo mensual positivo desde | mes 8 |
+| Punto de equilibrio (solo operativo) | **204 cuentas** — ❌ excede el techo del piloto (20-30), ✅ cae dentro de la meta de año 1-2 (304-608) |
+| Punto de equilibrio (recuperando inversión en 12 meses) | **230 cuentas** — mismo patrón |
+| Flujo mensual positivo desde | no ocurre dentro del año 1 del piloto (máx. 25 cuentas al mes 12); proyectado al mes 17 bajo un supuesto de crecimiento extendido no validado |
 | Inversión inicial | $28,638.98 MXN |
-| VPN a 12 meses (tasa 15%) | **−$30,221.36 MXN** |
+| VPN a 12 meses (tasa 15%) | **−$225,958.42 MXN** |
 
-**Hallazgo honesto:** el proyecto no recupera la inversión dentro de los primeros 12 meses a escala de piloto — esperado para un piloto académico, no una señal de que el modelo esté roto. El costo de la IA es irrelevante (<2% del costo unitario); el cuello de botella real es el volumen de cuentas.
+**Hallazgo honesto:** con Belvo en producción, el piloto de 20-30 familias, por diseño, nunca se acerca a su propio punto de equilibrio — un costo fijo de $18,636 MXN/mes no se paga con los ingresos de un piloto de validación. Esto no significa que el modelo esté roto: 204-230 cuentas caen justo dentro de la meta ya declarada de año 1-2 (304-608 hogares), así que el piloto cumple su función (validar, no operar sin pérdida) y el negocio se sostiene solo en la escala a la que ya apuntaba. Lo que sí cambia es la conversación con cualquier inversionista: el proyecto necesita financiamiento externo del orden de ~$225,958 MXN para cruzar del piloto a la escala donde se paga solo, no solo "unos meses más" como sugería el modelo anterior con Belvo Sandbox.
 
-**Qué falta:** confirmar con el profesor si existe un tope real de presupuesto en pesos.
+**Qué falta:** confirmar con el profesor si existe un tope real de presupuesto en pesos; validar con Belvo el costo exacto del plan Launch fuera de su página pública de precios.
 
 [Ver Semana 7 →](semanas/evidencia-semana-07.html)
 
@@ -349,6 +359,8 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 | Payback | 5.46 meses |
 
 **Hallazgo honesto:** la razón se rompe (cae debajo de 3.0) si el CAC sube más de 5.42 conversaciones por cierre — margen estrecho, no holgura.
+
+**Nota (27-nov-2026):** estos datos NO cambiaron cuando se corrigió el costo fijo de Belvo en sección 14 — miden la rentabilidad de un cliente marginal (precio menos costo variable), mientras que Belvo en producción es un costo fijo que se paga igual con 1 o con 200 clientes. Son dos preguntas distintas: "¿vale la pena cada cliente nuevo?" (sí, 3.25) vs. "¿el negocio completo se paga solo a esta escala?" (no todavía, ver sección 14).
 
 **Qué falta:** validar el CAC real (hoy es supuesto de modelo, no gasto medido con campañas corriendo).
 
@@ -476,6 +488,8 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 **Demo (5 min 12 s):** registro/login hijo → conectar cuenta (Belvo, mención verbal de sandbox) → lista de alertas → detalle de transacción (evento en vivo: clic en "Sí/No reconozco") → guía de resolución → registro/login padre → conectar cuenta + consentimiento → cierre en landing → ask. La limitación de Belvo se menciona solo de palabra, nunca se fuerza un error en pantalla — el demo cierra en el ask, no en una falla.
 
 **Guion completo del demo, con tiempos por pantalla:** [ver guion de navegación →](Claude%20outputs/guion-demo-video-semana9-vigilio.html)
+
+**Banco de preguntas frecuentes del panel, con respuestas y fuentes:** [ver documento completo →](Claude%20outputs/respuestas-preguntas-posibles-proyecto-final-vigilio.html)
 
 **Video de demo (Plan B, 5 min 12 s):** la demo real el viernes se hace en vivo, directamente en la app — este video es el respaldo por si algo falla durante la presentación, no la opción principal.
 
