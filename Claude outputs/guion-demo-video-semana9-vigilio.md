@@ -1,11 +1,11 @@
 ---
-title: "Guion de navegación — Video demo (7 minutos, Semana 9, Vigilio)"
+title: "Guion de navegación — Video demo (5 minutos con 12 segundos, Semana 9, Vigilio)"
 fecha: "26-nov-2026 (reestructurado a lista numerada, un paso = una acción o una frase, para seguir scrolleando en el teléfono mientras grabas desde la computadora)"
 nav_exclude: true
 search_exclude: true
 ---
 
-# Guion de navegación — Video de demo (7 minutos)
+# Guion de navegación — Video de demo (5 minutos con 12 segundos)
 
 **Cómo usarlo:** ve bajando esta lista en tu teléfono según vas dando clics en la computadora. Cada número es UN paso: o un clic, o una frase corta — nunca los dos a la vez. No hay usuario separado del papá: es una sola cuenta, la tuya, con dos vistas.
 

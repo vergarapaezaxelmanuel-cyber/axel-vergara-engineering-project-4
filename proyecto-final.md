@@ -58,7 +58,7 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 **Estado honesto, en una oración:** MVP funcional con ambos lados (hijo y padre/madre) construido y probado; 0 de 5 pruebas de usuario se completaron sin ayuda y 0 preórdenes pagadas, con los 3 ajustes prioritarios ya identificados.
 
-**Enlaces:** [repositorio y bitácora](https://github.com/vergarapaezaxelmanuel-cyber/axel-vergara-engineering-project-4) · <a href="https://vergarapaezaxelmanuel.bubbleapps.io/version-test" style="font-weight:700; background:#fde68a; color:#1a1a2e; padding:3px 10px; border-radius:6px; text-decoration:none; display:inline-block;">👉 app en vivo — pícale aquí</a> · landing (sección 19) · pitch y demo (sección 20 — video Plan B en camino).
+**Enlaces:** [repositorio y bitácora](https://github.com/vergarapaezaxelmanuel-cyber/axel-vergara-engineering-project-4) · <a href="https://vergarapaezaxelmanuel.bubbleapps.io/version-test" style="font-weight:700; background:#fde68a; color:#1a1a2e; padding:3px 10px; border-radius:6px; text-decoration:none; display:inline-block;">👉 app en vivo — pícale aquí</a> · <a href="https://youtu.be/K74nFRy1xBY" style="font-weight:700; background:#fde68a; color:#1a1a2e; padding:3px 10px; border-radius:6px; text-decoration:none; display:inline-block;">🎥 video de demo (Plan B) — pícale aquí</a> · landing (sección 19) · pitch y demo (sección 20).
 
 ---
 
@@ -183,7 +183,7 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 | Interfaz (5) | RI-01 a RI-05 | Integración solo lectura con Belvo; canal de notificación; 4 pantallas mínimas; accesibilidad |
 | Restricción (7) | RR-01 a RR-07 | Consentimiento revocable; software-only; sin control de gasto; ciclo de vida de datos |
 
-**Columna de estado (Semana 9):** <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> falta marcar cuáles de los 22 requerimientos ya están implementados/verificados en la app real.
+**Columna de estado (Semana 9):** de los 22, <span class="vg-badge vg-badge--ok">✅ 8 Cumple</span> (RF-02, RF-05, RI-02, RI-03, RR-01, RR-02, RR-03, RR-06), <span class="vg-badge vg-badge--pending">⚠️ 6 Parcial</span> (RF-01, RF-03, RF-04, RD-03, RI-01, RR-04) y <span class="vg-badge vg-badge--pending">❌ 8 No cumple/pendiente de probar</span> (RF-06, RD-01, RD-02, RD-04, RI-04, RI-05, RR-05, RR-07) — **tabla completa, requerimiento por requerimiento, en la [evidencia de Semana 9](semanas/evidencia-semana-09.html#estado-de-los-22-requerimientos).**
 
 **Qué falta:** cerrar la columna de estado con Semana 9.
 
@@ -456,7 +456,7 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 *Versión: 25-nov-2026 · Semana 9 — guiones ya finalizados.*
 
-**Decisión:** guion de pitch de 3 minutos (6 partes, fundador único) y guion de demo de 7 minutos (ambos lados de la app, plan B verbal para la falla de Belvo), con cifras reales.
+**Decisión:** guion de pitch de 3 minutos (6 partes, fundador único) y guion de demo de 5 minutos con 12 segundos (ambos lados de la app, plan B verbal para la falla de Belvo), con cifras reales.
 
 **Formato de evaluación:** 15 min por equipo — 3 pitch, 7 demo, 5 retroalimentación. **Viernes 27-nov-2026, 11:00, Salón J143.**
 
@@ -473,13 +473,17 @@ Captura real de la pantalla de alerta generada por el clasificador de IA en prod
 
 **Guion completo:** ver [guion de pitch, palabra por palabra →](Claude%20outputs/pitch-guion-semana9-vigilio.html) (1 cifra marcada <span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> de verificar: "3 de 9 pagarían hoy mismo").
 
-**Demo (7 min):** registro/login hijo → conectar cuenta (Belvo, mención verbal de sandbox) → lista de alertas → detalle de transacción (evento en vivo: clic en "Sí/No reconozco") → guía de resolución → registro/login padre → conectar cuenta + consentimiento → cierre en landing → ask. La limitación de Belvo se menciona solo de palabra, nunca se fuerza un error en pantalla — el demo cierra en el ask, no en una falla.
+**Demo (5 min 12 s):** registro/login hijo → conectar cuenta (Belvo, mención verbal de sandbox) → lista de alertas → detalle de transacción (evento en vivo: clic en "Sí/No reconozco") → guía de resolución → registro/login padre → conectar cuenta + consentimiento → cierre en landing → ask. La limitación de Belvo se menciona solo de palabra, nunca se fuerza un error en pantalla — el demo cierra en el ask, no en una falla.
 
 **Guion completo del demo, con tiempos por pantalla:** [ver guion de navegación →](Claude%20outputs/guion-demo-video-semana9-vigilio.html)
 
-<span class="vg-badge vg-badge--pending">⚠️ PENDIENTE</span> **Video de demo (Plan B):** la demo real el viernes se hace en vivo, directamente en la app — este video es el respaldo por si algo falla durante la presentación, no la opción principal. Aquí se incrusta una vez grabado.
+**Video de demo (Plan B, 5 min 12 s):** la demo real el viernes se hace en vivo, directamente en la app — este video es el respaldo por si algo falla durante la presentación, no la opción principal.
 
-**Qué falta:** grabar y subir el video de Plan B; practicar el timing de ambos guiones antes del viernes.
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:640px;margin:1rem 0;">
+  <iframe src="https://www.youtube.com/embed/K74nFRy1xBY" title="Vigilio — video de demo (Plan B)" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+
+**Qué falta:** practicar el timing de ambos guiones antes del viernes.
 
 ---
 

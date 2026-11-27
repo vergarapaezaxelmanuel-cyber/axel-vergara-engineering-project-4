@@ -94,5 +94,51 @@ Durante la sesión de Sofia, el clasificador generó esta alerta real, capturada
 
 Esta captura es evidencia directa de que el clasificador de IA genera una alerta razonada (no una regla fija de monto), consistente con lo descrito en la sección 21 (Uso de IA en el proyecto) de la página final.
 
+## Estado de los 22 requerimientos (Semana 9) {#estado-de-los-22-requerimientos}
+
+Columna de estado del PDS de Semana 5 (`requerimientos-ieee830-semana5-vigilio.md`), cerrada con evidencia real de esta semana: las pruebas de usuario, la tabla T1-T6 y lo confirmado en los clics de hoy. **Resumen: 8 Cumple, 6 Parcial, 8 No cumple/pendiente de probar, de 22.** No es un resultado que perjudique la entrega — es justo el tipo de honestidad que la rúbrica premia ("un equipo que sabe diagnosticar su propio sistema vale más que uno que esconde los bugs").
+
+**Funcionales (6)**
+
+| # | Estado | Por qué |
+|---|---|---|
+| RF-01 (detección/clasificación) | ⚠️ Parcial | Detecta y alerta funciona real, pero clasifica binario (SOSPECHOSA/NORMAL), no en las 3 categorías del enunciado. Multi-banco sin probar. |
+| RF-02 (alerta con confirmación) | ✅ Cumple | Confirmado end-to-end (botones reconozco/no reconozco funcionando). |
+| RF-03 (guía de resolución por tipo) | ⚠️ Parcial | La guía existe y funciona, pero es un solo flujo genérico, no 3 diferenciados (depende de RF-01). |
+| RF-04 (portal de consentimiento) | ⚠️ Parcial | Portal + revocar funcionan (confirmado 27-nov). Multi-cuenta por banco sin probar. |
+| RF-05 (vinculación inicial) | ✅ Cumple | Confirmado 27-nov: conectar cuenta lleva directo al consentimiento. |
+| RF-06 (manejo de falla de terceros) | ❌ No cumple | Decisión consciente de no construir este semestre — ya documentado como siguiente paso. |
+
+**Desempeño (4)**
+
+| # | Estado | Por qué |
+|---|---|---|
+| RD-01 (tiempo máx. de alerta) | ⚠️ Pendiente de medir | T2 no se completó — Belvo falló de su lado. |
+| RD-02 (falsos positivos) | ⚠️ Pendiente | Necesita datos de piloto real, aún no existen. |
+| RD-03 (disponibilidad) | ⚠️ Parcial | Evidencia informal: ~48h sin caídas en el link real, no es prueba de carga formal. |
+| RD-04 (capacidad 20-30 cuentas) | ❌ No probado | No se ha corrido prueba de carga multi-cuenta. |
+
+**Interfaz (5)**
+
+| # | Estado | Por qué |
+|---|---|---|
+| RI-01 (Belvo solo lectura, multi-link) | ⚠️ Parcial | Solo lectura confirmado; soporte de más de un banco por padre/madre sin probar. |
+| RI-02 (canal de notificación) | ✅ Cumple | Correo funciona con direcciones reales (basta un canal, el criterio no exige los dos). |
+| RI-03 (4 pantallas mínimas) | ✅ Cumple | Hay 11 pantallas navegables, de sobra sobre el mínimo. |
+| RI-04 (transparencia regulatoria en la app) | ❌ No cumple | No existe todavía una pantalla dedicada mostrando la autorización CNBV de Belvo dentro del producto. |
+| RI-05 (accesibilidad para el padre/madre) | ❌ No cumple | María (60 años) no completó la tarea sin ayuda en las pruebas de usuario — el propio resultado T1 lo contradice. |
+
+**Restricción (7)**
+
+| # | Estado | Por qué |
+|---|---|---|
+| RR-01 (consentimiento, solo alertas) | ✅ Cumple | Portal + revocación + alertas-only, todo confirmado. |
+| RR-02 (presupuesto/plazo/stack) | ✅ Cumple | Respetado todo el semestre. |
+| RR-03 (sin control de gasto) | ✅ Cumple | Nunca bloquea ni reporta por su cuenta. |
+| RR-04 (no atribuirse regulación propia) | ⚠️ Parcial | Consistente en todo lo que hemos escrito, pero falta una auditoría formal de todos los textos de la app/landing. |
+| RR-05 (Android 8+/iOS 14+) | ❌ No probado | Todo probado en navegador de escritorio, no en dispositivos móviles. |
+| RR-06 (primera versión funcional en Semana 7) | ✅ Cumple | Flujo completo demostrado desde Semana 7. |
+| RR-07 (ciclo de vida de datos) | ❌ No cumple | Sin verificar cifrado ni proceso real de eliminación al revocar. |
+
 ---
 **Referencia:** Cortés, A. (2026). *Semana 9 — Integración, go-to-market y pitch*. Proyectos de Ingeniería 4. https://aristarco.github.io/Proyectos4/semana9/
